@@ -33,7 +33,8 @@
     <!-- BÖLÜM KARTLARI -->
     <div class="department-grid">
         {% for d in departments %}
-        <div class="department-card" style="background-color: hsl({{ 200 + loop.index0 * 10 }}, 70%, 90%)">
+      <div class="department-card" style="background-color: hsl(200, 70%, 90%)">
+
             <a href="/bolum/{{ d.id }}">{{ d.name }}</a>
             <p class="year-text">{{ d.duration }}</p>
         </div>
