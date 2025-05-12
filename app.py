@@ -2,7 +2,8 @@ from flask import Flask, render_template, request
 import json
 import os
 
-app = Flask(__name__)
+# 'Templates' klasörü burada manuel olarak belirtiliyor
+app = Flask(__name__, template_folder="Templates")
 
 def load_departments():
     with open("data/departments.json", "r", encoding="utf-8") as f:
@@ -25,7 +26,4 @@ def detail(id):
     return render_template("detail.html", department=department)
 
 if __name__ == "__main__":
-    app.run(debug=True)
-if __name__ == "__main__":
     app.run(host='0.0.0.0', port=10000)
-
