@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Unifo | Üniversite Bölümleri</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- KAPAK VE LOGO ALANI -->
+    <header>
+        <div class="header-overlay">
+            <h1 class="logo">UNINFO</h1>
+            <p>Üniversite tercihini bilinçli yap</p>
+
+            <div class="type-menu">
+                <div class="type-box">Lisans</div>
+                <div class="type-box">Önlisans</div>
+                <div class="type-box">Yüksek Lisans</div>
+                <div class="type-box">Sertifika</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ARAMA KUTUSU -->
+    <div class="search-container">
+        <form method="GET">
+            <input type="text" name="q" placeholder="Bölüm ara...">
+            <button type="submit">Ara</button>
+        </form>
+    </div>
+
+    <!-- BÖLÜM KARTLARI -->
+    <div class="department-grid">
+        {% for d in departments %}
+        <div class="department-card" style="background-color: hsl({{ 200 + loop.index0 * 10 }}, 70%, 90%)">
+            <a href="/bolum/{{ d.id }}">{{ d.name }}</a>
+            <p class="year-text">{{ d.duration }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

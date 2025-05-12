@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ department.name }} | Unifo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 30px;
+            background-color: #f9fcff;
+            color: #111;
+        }
+
+        h1 {
+            color: #003366;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 36px;
+        }
+
+        .content-box {
+            max-width: 850px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .content-box h2 {
+            color: #003366;
+            margin-top: 40px;
+            font-size: 22px;
+        }
+
+        .content-box p {
+            margin-bottom: 14px;
+        }
+
+        a {
+            color: #003366;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 40px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>{{ department.name }}</h1>
+
+    <div class="content-box">
+        <h2>Verilen Dersler</h2>
+        {% for line in department.courses %}
+            <p>{{ line }}</p>
+        {% endfor %}
+
+        <h2>Dönem Yapısı</h2>
+        {% for line in department.structure %}
+            <p>{{ line }}</p>
+        {% endfor %}
+
+        <h2>Kariyer Fırsatları</h2>
+        {% for line in department.careers %}
+            <p>{{ line }}</p>
+        {% endfor %}
+
+        <a href="/">← Ana sayfaya dön</a>
+    </div>
+
+</body>
+</html>

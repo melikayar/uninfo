@@ -1,0 +1,455 @@
+[
+    {
+    "id": 1,
+    "name": "Bilgisayar Mühendisliği",
+    "duration": "4 yıl",
+    "courses": [
+        "Bilgisayar Mühendisliği eğitiminde öğrenciler, algoritmalar ve veri yapılarıyla başlayarak, problemlere mantıksal ve sistematik çözümler üretmeyi öğrenir.",
+        "Programlama dilleri dersiyle birlikte Python, C++ gibi dillerde kod yazma pratiği kazanılır.",
+        "Veritabanı sistemleri sayesinde verileri etkili bir şekilde saklama, düzenleme ve sorgulama becerisi geliştirilir.",
+        "İşletim sistemleri dersi, yazılım ile donanım arasındaki ilişkiyi kavramaya yardımcı olurken; bilgisayar ağları, internet altyapısını anlamayı sağlar.",
+        "Yazılım mühendisliği derslerinde ekip çalışmasıyla proje geliştirme süreçleri deneyimlenir.",
+        "Son olarak, yapay zeka ve makine öğrenmesi gibi güncel teknolojilerle öğrenciler geleceğin dijital dünyasına hazırlanır."
+    ],
+    "structure": [
+        "Eğitim süreci genellikle güz ve bahar olmak üzere iki ana dönemden oluşur.",
+        "Her dönemde zorunlu temel derslerin yanı sıra öğrencilerin ilgi alanlarına göre seçmeli dersler de sunulur.",
+        "Teorik derslerin yanı sıra laboratuvar uygulamalarıyla konular pekiştirilir.",
+        "3. sınıftan itibaren öğrenciler yazılım, donanım veya veri bilimi gibi alanlarda uzmanlaşma imkanı bulur.",
+        "Yaz aylarında gerçekleştirilen stajlar sayesinde öğrenciler sektörle tanışır.",
+        "Bitirme projeleri ise dördüncü sınıfın sonunda yapılır ve genellikle gerçek dünya problemlerine çözüm üretmeye yöneliktir.",
+        "Eğitim boyunca proje tabanlı yaklaşım ön plandadır ve öğrenciler aktif üretim içinde yer alır."
+    ],
+    "careers": [
+        "Bilgisayar mühendisliği mezunları yazılım şirketlerinde geliştirici, sistem analisti veya proje yöneticisi olarak çalışabilir.",
+        "Kamuda bilgi işlem merkezlerinde görev alabilecekleri gibi özel sektörde de geniş bir istihdam alanına sahiptirler.",
+        "Siber güvenlik, yapay zeka, mobil uygulama ve oyun geliştirme gibi alt alanlarda uzmanlaşabilirler.",
+        "Freelance çalışma ve kendi girişimlerini kurma olanakları da oldukça yaygındır.",
+        "Yurt dışı bağlantılı firmalarla uzaktan çalışmak, uluslararası projelerde yer almak mümkün hale gelmiştir.",
+        "Ayrıca lisansüstü eğitimle akademik kariyer veya araştırma merkezlerinde görev alma fırsatı da sunar.",
+        "Hızla gelişen teknoloji sayesinde bilgisayar mühendislerine olan ihtiyaç her geçen yıl artmaktadır."
+    ]
+},
+{
+    "id": 2,
+    "name": "Hukuk",
+    "duration": "4 yıl",
+    "courses": [
+        "Hukuk fakültesinde eğitim, anayasa hukuku ve medeni hukuk gibi temel derslerle başlar.",
+        "Ceza hukuku, idare hukuku ve borçlar hukuku gibi alanlarda öğrencilere detaylı bilgi verilir.",
+        "Roma hukuku dersiyle hukukun tarihi temelleri anlaşılır, günümüz sistemleriyle ilişkilendirilir.",
+        "Usul hukuku, davaların nasıl yürütüldüğünü öğretir; pratik dava çözüm teknikleri kazandırılır.",
+        "Uluslararası hukuk dersleriyle farklı ülke sistemleri ve küresel hukuk yapıları tanıtılır.",
+        "Seçmeli derslerde insan hakları, ticaret hukuku veya bilişim hukuku gibi özel alanlara yönelim sağlanır.",
+        "Öğrenciler teorik bilgilerin yanında uygulamalı mahkeme simülasyonlarıyla pratiğe hazırlanır."
+    ],
+    "structure": [
+        "Hukuk eğitimi yıllık sistem ya da dönemlik sistemle verilebilir ancak çoğu üniversitede yıllıktır.",
+        "İlk iki yılda temel hukuk dersleri ağırlıklı olarak okutulur ve kavramsal altyapı kurulur.",
+        "Üçüncü sınıftan itibaren özel hukuk ve kamu hukuku ayrımıyla uzmanlaşmaya geçilir.",
+        "Klinik eğitim, mütalaa yazımı ve dava dosyası incelemeleriyle pratik bilgi kazandırılır.",
+        "Derslerde hem yerel mevzuat hem de karşılaştırmalı hukuk örnekleri analiz edilir.",
+        "4. sınıfta staj hazırlıkları yapılır ve öğrenciler adliye gözlemi gibi sahaya yakın deneyimler kazanır.",
+        "Bitirme projesi veya uzmanlık sunumlarıyla akademik ve mesleki gelişim desteklenir."
+    ],
+    "careers": [
+        "Hukuk mezunları avukatlık stajı sonrası baroya kayıt olarak serbest avukatlık yapabilir.",
+        "Adli yargı sınavlarını geçerek hâkimlik veya savcılık mesleğine adım atabilirler.",
+        "Noterlik, hukuk müşavirliği ve şirket içi danışmanlık gibi alternatif kariyer alanları da mümkündür.",
+        "Akademik kariyer isteyenler yüksek lisans ve doktora ile üniversitelerde görev alabilir.",
+        "Uluslararası hukuk büroları, insan hakları örgütleri veya diplomatik görevler gibi alanlar da tercih edilir.",
+        "Bankalar, sigorta şirketleri ve büyük holdinglerde hukuk birimlerinde istihdam edilebilirler.",
+        "Sınav ve süreçleri başarıyla geçen mezunlar idari yargı, sayıştay gibi kurumlarda görev alabilir."
+
+    
+    ]
+  },
+
+{
+
+
+    "id": 3,
+    "name": "Psikoloji",
+    "duration": "4 yıl",
+    "courses": [
+        "Psikoloji bölümü, giriş düzeyindeki genel psikoloji ve gelişim psikolojisi dersleriyle başlar.",
+        "Fizyolojik psikoloji, insan davranışlarının biyolojik temellerini anlamayı sağlar.",
+        "Deneysel psikoloji ve istatistik dersleriyle bilimsel veri toplama ve analiz becerisi kazandırılır.",
+        "Sosyal psikoloji, bireylerin grup içindeki davranışlarını anlamaya odaklanır.",
+        "Klinik psikoloji ve psikopatoloji dersleri, ruhsal bozuklukların tanı ve tedavi süreçlerine giriş sağlar.",
+        "Ölçme ve değerlendirme, psikometrik testler ve envanterlerin nasıl kullanıldığını öğretir.",
+        "Son yıllarda uygulamalı stajlar, vaka analizleri ve süpervizyon altında gözlem çalışmaları yapılır."
+    ],
+    "structure": [
+        "Psikoloji eğitimi genellikle dört yıl süren dönemlik bir program üzerinden yürütülür.",
+        "İlk iki yılda temel teorik dersler ve yöntem bilgisi verilir, analitik düşünme becerisi kazandırılır.",
+        "Üçüncü yıldan itibaren öğrenciler alan seçmeli derslerle ilgi alanlarına göre yönlenebilir.",
+        "Araştırma projeleri ve küçük grup çalışmalarıyla bilimsel yaklaşım desteklenir.",
+        "Uygulamalı dersler, danışman eşliğinde test uygulama ve sonuç yorumlama becerisi kazandırır.",
+        "Lisans boyunca etik ilkeler, gizlilik ve profesyonel sınırlar sıkça vurgulanır.",
+        "Son yıl yapılan staj ve bitirme projesiyle mezuniyet öncesi profesyonel hazırlık sağlanır."
+    ],
+    "careers": [
+        "Psikoloji mezunları klinik psikolog olabilmek için yüksek lisans programlarına başvururlar.",
+        "Rehberlik ve danışmanlık merkezlerinde ya da okullarda psikolojik danışman olarak çalışabilirler.",
+        "İnsan kaynakları, işe alım, eğitim ve performans değerlendirme alanlarında görev alabilirler.",
+        "Araştırma merkezleri ve anket firmalarında veri analizi ve sosyal araştırmalar yapabilirler.",
+        "Sağlık kurumlarında terapist, test uygulayıcısı veya danışman olarak çalışabilirler.",
+        "Özel danışmanlık ofisleri veya kurum içi psikolojik destek birimlerinde istihdam edilebilirler.",
+        "Akademik kariyer isteyenler, lisansüstü eğitimle üniversitelerde görev alabilirler."
+    ]
+},
+{
+    "id": 4,
+    "name": "İktisat",
+    "duration": "4 yıl",
+    "courses": [
+        "İktisat bölümünde eğitim, mikroekonomi ve makroekonomi gibi temel teorik derslerle başlar.",
+        "İstatistik ve ekonometri dersleri, ekonomik verileri analiz etmeye yönelik sayısal beceriler kazandırır.",
+        "Kamu maliyesi dersi, devletin gelir ve harcama politikalarının ekonomi üzerindeki etkilerini ele alır.",
+        "Uluslararası iktisat dersinde dış ticaret, döviz kuru sistemleri ve küresel ekonomik ilişkiler öğretilir.",
+        "Kalkınma ekonomisi, gelişmekte olan ülkelerin karşılaştığı yapısal sorunları incelemeyi amaçlar.",
+        "Para ve banka dersleri, merkez bankacılığı, enflasyon ve faiz politikalarını kapsar.",
+        "Dersler, hem teorik temele hem de güncel ekonomik gelişmelerin yorumlanmasına odaklanır."
+    ],
+    "structure": [
+        "İktisat eğitimi dönemlik sisteme göre ilerler ve her dönem hem teorik hem uygulamalı dersler içerir.",
+        "İlk iki yılda temel ekonomi, hukuk ve işletme dersleri ile disiplinlerarası bir bakış kazandırılır.",
+        "3. ve 4. sınıflarda öğrencilere alan seçmeli dersler sunularak uzmanlaşma fırsatı sağlanır.",
+        "Akademik araştırma yöntemleri ve rapor yazımı dersleri, bilimsel üretimi teşvik eder.",
+        "Proje çalışmaları, öğrencilere ekonomi politikalarının simülasyonlarını yapma becerisi kazandırır.",
+        "Uygulamalı iktisat derslerinde vaka analizleri, saha verisi yorumlama gibi pratik çalışmalar yer alır.",
+        "Son sınıfta öğrenciler, mezuniyet tezi veya analiz projesiyle süreci tamamlar."
+    ],
+    "careers": [
+        "İktisat mezunları kamu kurumlarında müfettiş, uzman yardımcısı ya da denetçi olarak görev alabilir.",
+        "Merkez Bankası, Hazine ve Maliye Bakanlığı gibi kurumlarda sınavla uzmanlık yapabilirler.",
+        "Bankacılık ve finans sektöründe ekonomist, risk analisti ya da portföy yöneticisi olarak çalışabilirler.",
+        "Araştırma şirketlerinde veri analizi, ekonomik modelleme ve raporlama pozisyonlarında görev alabilirler.",
+        "Akademik kariyer yapmak isteyen mezunlar yüksek lisans ve doktora programlarına devam edebilirler.",
+        "STK’lar, uluslararası kuruluşlar ve kalkınma ajanslarında iktisat bilgisine dayalı pozisyonlar bulunur.",
+        "Kendi işini kurmak isteyenler ekonomi bilgisiyle girişimcilik alanında avantajlı olabilir."
+    ]
+},
+{
+    "id": 5,
+    "name": "İşletme",
+    "duration": "4 yıl",
+    "courses": [
+        "İşletme bölümü, temel yönetim ve organizasyon teorileriyle giriş yapar.",
+        "Muhasebe ve finans dersleri, şirketlerin mali yapılarını anlama ve raporlama becerisi kazandırır.",
+        "Pazarlama dersleri, tüketici davranışları, ürün konumlandırma ve marka yönetimi gibi konulara odaklanır.",
+        "Üretim ve operasyon yönetimi, iş süreçlerinin verimli şekilde yönetilmesini öğretir.",
+        "İnsan kaynakları yönetimi, işe alım, eğitim, performans değerlendirme gibi süreçleri kapsar.",
+        "Stratejik yönetim derslerinde rekabet analizi ve uzun vadeli karar alma becerileri geliştirilir.",
+        "Ayrıca girişimcilik, iş hukuku ve ticaret hukuku gibi alanlara da ders programında yer verilir."
+    ],
+    "structure": [
+        "Eğitim genellikle dönemlik sisteme göre yürütülür ve her dönem farklı işlevsel alana odaklanılır.",
+        "İlk yıllarda öğrenciler temel işletmecilik ve ekonomi dersleriyle donanım kazanır.",
+        "3. sınıftan itibaren pazarlama, finans, insan kaynakları gibi alanlarda uzmanlaşma imkanı sunulur.",
+        "Vaka analizi yöntemiyle öğrenciler gerçek iş senaryoları üzerinden çözüm geliştirmeyi öğrenir.",
+        "Grup projeleri ve sunumlarla liderlik, iletişim ve ekip çalışması becerileri desteklenir.",
+        "İş dünyası ile işbirliği içinde yapılan stajlar, öğrencilere deneyim kazandırır.",
+        "Son sınıfta hazırlanan bitirme projesi ile öğrenciler iş dünyasına yönelik bir planlama yapar."
+    ],
+    "careers": [
+        "İşletme mezunları özel sektörde satış, pazarlama, finans veya insan kaynakları alanlarında çalışabilir.",
+        "Uluslararası firmalarda yönetici asistanlığı, proje koordinatörlüğü gibi pozisyonlarda görev alabilirler.",
+        "Girişimcilik yönü güçlü mezunlar kendi işlerini kurarak kariyerlerine bağımsız şekilde yön verebilirler.",
+        "Bankalarda operasyon, kredi, yatırım ve bireysel bankacılık alanlarında çalışabilirler.",
+        "Danışmanlık firmalarında strateji geliştirme, kurumsal analiz ve verimlilik projelerinde yer alabilirler.",
+        "Kamuda uzman yardımcılığı, denetçilik veya yönetim pozisyonlarında yer alabilirler.",
+        "Yüksek lisansla akademiye yönelen mezunlar, üniversitelerde öğretim görevlisi olabilirler."
+    ]
+},
+{
+    "id": 6,
+    "name": "Mimarlık",
+    "duration": "4 yıl",
+    "courses": [
+        "Mimarlık eğitimine tasarım stüdyosu dersleriyle başlanır ve bu dersler her dönemde devam eder.",
+        "Yapı bilgisi ve yapı malzemeleri dersleriyle binaların fiziksel dayanıklılığı öğretilir.",
+        "Mimarlık tarihi ve teorisi, öğrencilerin estetik ve kültürel bakış açılarını geliştirir.",
+        "Statik ve mukavemet gibi mühendislik tabanlı dersler teknik altyapı kazandırır.",
+        "Bilgisayar destekli tasarım (CAD) ve 3D modelleme yazılımları aktif olarak kullanılır.",
+        "Kentsel tasarım ve planlama dersleri, şehir ölçeğinde düşünmeyi teşvik eder.",
+        "Makette çalışma, saha gezileri ve proje sunumları mimarlık pratiğini pekiştirir."
+    ],
+    "structure": [
+        "Mimarlık eğitimi dönemliktir ve her dönem stüdyo projeleriyle uygulamalı şekilde ilerler.",
+        "İlk yıllarda temel çizim, görsel anlatım teknikleri ve mimari düşünme kazandırılır.",
+        "3. sınıftan itibaren öğrencilere konut, kamusal alan, endüstriyel yapılar gibi ölçeklerde proje deneyimi sunulur.",
+        "Atölye derslerinde öğrenciye özgün tasarım üretme ve yaratıcı problem çözme yeteneği kazandırılır.",
+        "Her dönem sonunda jüri sunumlarıyla projeler değerlendirilir, eleştirel geri bildirim alınır.",
+        "Mimarlık ofislerinde veya şantiyelerde yapılan stajlarla sektörel deneyim edinilir.",
+        "Son yıl bitirme projesiyle öğrenciler bağımsız bir mimari tasarım sürecini baştan sona yürütür."
+    ],
+    "careers": [
+        "Mimarlık mezunları serbest mimar olarak kendi ofislerini açabilir veya ekiplerle çalışabilir.",
+        "Mimarlık ofislerinde tasarımcı, teknik ressam veya proje koordinatörü olarak görev alabilirler.",
+        "Kamu kurumlarında imar planlama, belediyelerde ruhsat ve denetim alanlarında çalışabilirler.",
+        "İnşaat ve gayrimenkul sektöründe proje geliştirme, şantiye yönetimi gibi roller üstlenebilirler.",
+        "Peyzaj, iç mimarlık, kentsel tasarım gibi yakın alanlara yönelerek uzmanlık geliştirebilirler.",
+        "Yüksek lisans ile akademik kariyere yönelerek araştırma ve öğretim alanında ilerleyebilirler.",
+        "Yurtdışı ofislerde, uluslararası yarışmalarda ve büyük ölçekli projelerde yer alabilirler."
+    ]
+},
+
+{
+    "id": 7,
+    "name": "İç Mimarlık",
+    "duration": "4 yıl",
+    "courses": [
+        "İç Mimarlık bölümü, temel tasarım ve mekân algısı dersleriyle başlar.",
+        "Çizim teknikleri, perspektif ve görsel anlatım dersleriyle estetik ifade becerisi geliştirilir.",
+        "Yapı bilgisi, malzeme bilgisi ve iç mekân teknolojileri gibi teknik derslerle uygulama yetkinliği kazanılır.",
+        "Renk teorisi ve aydınlatma tasarımı dersleriyle mekân atmosferi oluşturma becerisi desteklenir.",
+        "Mobilya tasarımı derslerinde hem ergonomi hem de üretim teknikleri ele alınır.",
+        "Bilgisayar destekli tasarım (AutoCAD, SketchUp, 3D Max) programları aktif şekilde kullanılır.",
+        "Stüdyo dersleriyle her dönem konut, ofis, mağaza gibi farklı iç mekân projeleri hazırlanır."
+    ],
+    "structure": [
+        "Eğitim süreci dönemliktir ve her dönem bir tasarım stüdyosu projesi içerir.",
+        "İlk iki yıl temel tasarım, teknik çizim ve malzeme bilgisi üzerine yoğunlaşılır.",
+        "Üçüncü sınıftan itibaren öğrenciler kamusal ve özel iç mekânlarda özgün tasarımlar üretmeye başlar.",
+        "Makette çalışma, renk-malzeme-mekân ilişkisini kavramada önemli rol oynar.",
+        "Dijital tasarım ve render teknikleriyle öğrenci sunum yetkinliği kazanır.",
+        "Alan gezileri ve şantiye gözlemleriyle gerçek yaşam mekânları analiz edilir.",
+        "Dördüncü sınıfta bitirme projesiyle öğrenci bağımsız ve profesyonel bir iç mimari çözüm sunar."
+    ],
+    "careers": [
+        "İç mimarlık mezunları özel tasarım ofislerinde veya kendi stüdyolarında iç mekân projeleri yürütebilir.",
+        "Mobilya, dekorasyon, aydınlatma firmalarında tasarımcı ya da ürün geliştirici olarak çalışabilirler.",
+        "Mimarlık ve inşaat firmalarında iç mekân danışmanı ya da proje sorumlusu olabilirler.",
+        "Konut, ofis, mağaza, otel ve restoran gibi birçok alanda iç mekân düzenlemesi yapabilirler.",
+        "Fuar, sergi, sahne ve vitrin tasarımı gibi geçici mekânlarda uzmanlaşabilirler.",
+        "Yüksek lisans programlarıyla akademik kariyere ya da ürün tasarımına yönlenebilirler.",
+        "Yurt içi ve yurt dışındaki projelerde ekip içinde yer alarak uluslararası tecrübe edinebilirler."
+    ]
+},
+{
+    "id": 8,
+    "name": "Elektrik-Elektronik Mühendisliği",
+    "duration": "4 yıl",
+    "courses": [
+        "Elektrik-Elektronik Mühendisliği eğitimi, temel fizik, devre teorisi ve matematik dersleriyle başlar.",
+        "Dersler ilerledikçe analog ve dijital elektronik konularına geçilir; öğrencilere devre tasarımı öğretilir.",
+        "Elektromanyetik alan teorisi ve sinyal işleme dersleri, mühendislik altyapısını güçlendirir.",
+        "Mikrodenetleyiciler, mikroişlemciler ve gömülü sistemlerle uygulamalı kontrol sistemleri geliştirilir.",
+        "Enerji sistemleri ve elektrik makineleri dersleriyle güç iletimi ve üretimi anlaşılır.",
+        "İleri sınıflarda haberleşme sistemleri, telekomünikasyon ve anten tasarımı gibi alanlara yönelim sağlanır.",
+        "Laboratuvar dersleri, yazılım simülasyonları ve grup projeleriyle teknik beceriler pekiştirilir."
+    ],
+    "structure": [
+        "Eğitim dönemlik olup teorik ve uygulamalı içerik birlikte sunulur.",
+        "İlk iki yılda mühendislik temel dersleri ve matematik yoğunluklu eğitim verilir.",
+        "Üçüncü sınıftan itibaren öğrenciler sinyal işleme, haberleşme veya güç sistemleri gibi alanlarda uzmanlaşabilir.",
+        "Uygulamalı laboratuvar çalışmaları ile teorik bilgiler gerçek donanımlarla test edilir.",
+        "Stajlar, yaz tatillerinde yapılır ve öğrencilere endüstriyel deneyim kazandırır.",
+        "Proje derslerinde öğrenciler robotik, otomasyon veya enerji verimliliği üzerine ürün geliştirir.",
+        "Bitirme projesi, öğrencinin seçtiği bir alanda araştırma yapmasını ve somut bir ürün ortaya koymasını sağlar."
+    ],
+    "careers": [
+        "Mezunlar elektrik şirketlerinde enerji üretimi, iletimi ve dağıtımı alanlarında çalışabilir.",
+        "Telekomünikasyon firmalarında haberleşme sistemleri üzerine uzmanlaşabilirler.",
+        "Savunma sanayii, otomotiv ve robotik sektörlerinde kontrol sistemleri ve donanım geliştirme görevleri alabilirler.",
+        "Gömülü sistemler ve elektronik kart tasarımı alanlarında Ar-Ge mühendisi olabilirler.",
+        "Yazılım tabanlı firmalarda donanım-yazılım entegrasyonu üzerine çalışabilirler.",
+        "Yüksek lisansla akademik alanda kariyer yapma veya teknik danışmanlık pozisyonlarına geçme fırsatları vardır.",
+        "Yurtdışı mühendislik projelerinde görev alarak uluslararası tecrübe edinebilirler."
+    ]
+},
+{
+    "id": 9,
+    "name": "Makine Mühendisliği",
+    "duration": "4 yıl",
+    "courses": [
+        "Makine mühendisliği eğitimi, fizik, matematik ve mühendislik çizimi gibi temel derslerle başlar.",
+        "Statik, dinamik ve mukavemet dersleriyle kuvvetlerin sistemler üzerindeki etkisi öğretilir.",
+        "Termodinamik ve ısı transferi gibi derslerle enerji dönüşümleri ve ısı akışı analizi yapılır.",
+        "Akışkanlar mekaniği, boru sistemleri ve hava-hidrolik devrelerin çalışmasını açıklar.",
+        "Makine elemanları ve imalat teknolojileri, sistem tasarımı ve üretim süreçlerine odaklanır.",
+        "CAD/CAM ve bilgisayar destekli tasarım dersleri ile 3 boyutlu çizim ve simülasyon becerisi kazandırılır.",
+        "Tüm bu dersler, uygulamalı laboratuvarlar ve proje tabanlı çalışmalarla desteklenir."
+    ],
+    "structure": [
+        "Eğitim süreci dönemlik olup, her dönem zorunlu teorik derslerle birlikte uygulamalı içerikler barındırır.",
+        "İlk iki yılda temel mühendislik bilgisi kazandırılırken öğrenciler teknik hesaplama alışkanlığı edinir.",
+        "Üçüncü sınıftan itibaren mekanik tasarım, enerji sistemleri veya üretim mühendisliği gibi alanlarda uzmanlaşma başlar.",
+        "Uygulamalı laboratuvar dersleriyle motorlar, makineler ve üretim hatları analiz edilir.",
+        "Yaz dönemlerinde yapılan zorunlu stajlarla sanayi deneyimi kazanılır.",
+        "Proje ve tasarım dersleri ile öğrenciler grup halinde sistem çözümleri geliştirir.",
+        "Son yıl yapılan bitirme projesiyle teorik bilgilerin sektöre aktarımı sağlanır."
+    ],
+    "careers": [
+        "Makine mühendisliği mezunları otomotiv, savunma, enerji ve üretim sektörlerinde geniş iş olanaklarına sahiptir.",
+        "Ar-Ge merkezlerinde ürün geliştirme mühendisi, analiz mühendisi veya tasarım uzmanı olarak görev alabilirler.",
+        "Fabrikalarda bakım-onarım, üretim planlama ve kalite kontrol alanlarında çalışabilirler.",
+        "Enerji firmalarında ısıtma, soğutma ve enerji verimliliği üzerine projelerde yer alabilirler.",
+        "Kendi işlerini kurarak makine imalatı, teknik servis veya mühendislik danışmanlığı sunabilirler.",
+        "Akademik kariyer yapmak isteyenler yüksek lisans ve doktora programlarına devam edebilirler.",
+        "Yurtdışı mühendislik ofislerinde, uluslararası projelerde görev alarak küresel deneyim edinebilirler."
+    ]
+},
+{
+    "id": 11,
+    "name": "Endüstri Mühendisliği",
+    "duration": "4 yıl",
+    "courses": [
+        "Endüstri mühendisliği eğitimi, matematik, fizik ve mühendislik çizimi gibi temel derslerle başlar.",
+        "İstatistik ve olasılık dersleri, karar alma süreçlerinde veri analizini anlamak için önemlidir.",
+        "Yöneylem araştırması ve optimizasyon dersleri, sistemleri verimli hale getirme tekniklerini öğretir.",
+        "Üretim planlama ve stok kontrolü, işletmelerin maliyet ve zaman yönetimini geliştirmeyi amaçlar.",
+        "İş etüdü ve zaman etüdü derslerinde süreç analizi ve verimlilik ölçümü yapılır.",
+        "Simülasyon ve modelleme, karmaşık sistemlerin dijital ortamda analiz edilmesini sağlar.",
+        "ERP sistemleri, proje yönetimi ve kalite mühendisliği dersleriyle öğrenciye bütünsel bakış açısı kazandırılır."
+    ],
+    "structure": [
+        "Eğitim dönemlik olarak planlanır ve her dönem teorik derslerle birlikte uygulamalı içerikler içerir.",
+        "İlk yıllarda mühendisliğe giriş, algoritma, ekonomi ve temel işletme dersleri verilir.",
+        "Üçüncü sınıftan itibaren öğrencilere üretim, hizmet ve lojistik sistemleri üzerine uzmanlaşma fırsatı sunulur.",
+        "Grup çalışmaları, vaka analizleri ve simülasyon yazılımlarıyla proje tabanlı öğrenme desteklenir.",
+        "Zorunlu stajlarla öğrencilere üretim sahası ve yönetim süreçleri hakkında deneyim kazandırılır.",
+        "Dördüncü sınıfta gerçek firmalarla işbirliği içinde proje geliştirme ve analiz yapılır.",
+        "Bitirme projesi, öğrencilere tüm süreçleri baştan sona planlama ve çözüm üretme becerisi kazandırır."
+    ],
+    "careers": [
+        "Endüstri mühendisleri üretim, lojistik, planlama ve kalite yönetimi gibi birçok alanda çalışabilir.",
+        "Büyük firmalarda verimlilik artırma, süreç iyileştirme ve kaynak planlaması üzerine görev alabilirler.",
+        "Danışmanlık firmalarında süreç analizi, optimizasyon ve sistem tasarımı yapabilirler.",
+        "ERP yazılımları ve iş zekası araçları kullanan teknoloji odaklı pozisyonlara geçebilirler.",
+        "İnsan kaynakları, proje yönetimi ve tedarik zinciri gibi işlevsel alanlarda kariyer yapabilirler.",
+        "Kamu kuruluşlarında planlama uzmanı veya araştırma görevlisi olarak da görev alabilirler.",
+        "Yüksek lisans yaparak akademik kariyere veya iş analitiği, veri bilimi gibi yeni alanlara yönelebilirler."
+    ]
+},
+
+{
+    "id": 10,
+    "name": "Tıp",
+    "duration": "6 yıl",
+    "courses": [
+        "Tıp eğitimi, temel bilimlerle başlar; anatomi, histoloji ve biyokimya gibi dersler ilk yıllarda verilir.",
+        "Fizyoloji ve mikrobiyoloji dersleriyle vücudun çalışma sistemi ve mikroorganizmalar detaylı şekilde öğretilir.",
+        "Patoloji, hastalıkların nedenlerini ve doku değişimlerini anlamaya yönelik bir temel oluşturur.",
+        "Farmakoloji dersinde ilaçların etkileri, yan etkileri ve etkileşimleri incelenir.",
+        "Klinik bilimlere geçişte iç hastalıkları, cerrahi, kadın doğum gibi derslerle hasta değerlendirme becerileri geliştirilir.",
+        "Simülasyon laboratuvarları ve maketler üzerinde uygulamalı eğitimle klinik yetkinlik kazanılır.",
+        "Son yıllarda öğrenciler gerçek hastanelerde rotasyonlara katılarak pratik deneyim elde eder."
+    ],
+    "structure": [
+        "Tıp eğitimi 3 yıl temel bilimler, 2 yıl klinik bilimler ve 1 yıl internlük olmak üzere toplam 6 yıldır.",
+        "İlk 3 yılda teorik bilgiler ağırlıklıdır ve öğrenciler sistematik olarak vücut sistemlerini öğrenir.",
+        "4. ve 5. sınıflarda öğrenciler hastane ortamında klinik derslere katılarak vaka temelli öğrenmeye başlar.",
+        "Her branş için belirlenen rotasyonlarda öğrenciler hasta muayenesi, tanı ve tedavi sürecine dahil olur.",
+        "Dersler yoğun şekilde laboratuvar, maket, sunum ve sözlü anlatımla desteklenir.",
+        "İnternlük yılında öğrenci, doktor gözetiminde aktif olarak hasta takibi ve müdahale yapar.",
+        "Eğitim boyunca tıbbi etik, hasta hakları ve iletişim becerileri de yoğun şekilde işlenir."
+    ],
+    "careers": [
+        "Tıp fakültesi mezunları pratisyen hekim olarak hastanelerde ve aile sağlığı merkezlerinde çalışabilir.",
+        "Tıpta Uzmanlık Sınavı (TUS) ile belirli bir alanda uzmanlık eğitimine devam edebilirler.",
+        "Uzman hekim olarak devlet hastaneleri, üniversite hastaneleri veya özel kliniklerde görev alabilirler.",
+        "Akademik kariyer yapmak isteyenler asistanlık ve doktora programlarına başvurabilirler.",
+        "Yurt dışında denklik sağlayarak hekimlik yapma imkânı da mümkündür.",
+        "Sağlık politikaları, kamu yönetimi ve sağlık sigortası gibi alanlarda da uzmanlaşabilirler.",
+        "Araştırma merkezlerinde klinik deneyler, ilaç geliştirme ve halk sağlığı projelerinde yer alabilirler."
+    ]
+},
+{
+    "id": 12,
+    "name": "Diş Hekimliği",
+    "duration": "5 yıl",
+    "courses": [
+        "Diş Hekimliği eğitimi, ilk yıllarda temel tıp dersleriyle başlar; anatomi, fizyoloji ve biyokimya ağırlıklıdır.",
+        "Ağız, diş ve çene anatomisi gibi özel alanlara yönelik dersler erken dönemde verilmeye başlanır.",
+        "Mikrobiyoloji ve patoloji gibi derslerle enfeksiyon kontrolü ve hastalıkların temeli öğretilir.",
+        "Protez, endodonti ve pedodonti gibi uygulamalı derslerle klinik beceriler gelişmeye başlar.",
+        "Restoratif diş tedavisi, estetik uygulamalar ve dolgu teknikleri ayrıntılı olarak öğretilir.",
+        "Preklinik uygulamalarda öğrenciler maketler üzerinde tedavi pratiği yaparak el becerisi kazanır.",
+        "Klinik dönemde ise gerçek hastalarla birebir çalışılarak tanı, tedavi ve hasta iletişimi geliştirilir."
+    ],
+    "structure": [
+        "Eğitim 5 yıldır ve ilk iki yıl temel bilimler ve preklinik uygulamalarla geçer.",
+        "3. yıldan itibaren öğrenciler klinik bilimlerle birlikte hasta kabulüne başlar.",
+        "Her yıl giderek artan uygulamalı derslerle öğrencilere klinik karar verme yetkinliği kazandırılır.",
+        "Her uzmanlık alanı için ayrı rotasyon yapılır: ortodonti, cerrahi, pedodonti gibi.",
+        "Tedavi süreçlerinde dijital teknolojiler, ağız içi tarayıcılar ve CAD/CAM sistemleri kullanılır.",
+        "Etik, hasta hakları ve iletişim dersleriyle mesleki sorumluluklar öğretilir.",
+        "5. sınıf internlük yılıdır ve öğrenci gözetim altında aktif tedavi uygulamaları yapar."
+    ],
+    "careers": [
+        "Diş hekimliği mezunları muayenehane açarak serbest hekimlik yapabilir.",
+        "Kamu hastanelerinde veya ağız ve diş sağlığı merkezlerinde görev alabilirler.",
+        "Uzmanlık eğitimi (DUS) ile ortodonti, pedodonti, periodontoloji gibi alanlarda uzmanlaşabilirler.",
+        "Estetik diş hekimliği, implantoloji ve dijital diş hekimliği gibi gelişen alanlara yönelme fırsatları vardır.",
+        "Yurt dışında denklik sağlayarak kliniklerde veya akademik kurumlarda görev alabilirler.",
+        "Diş hekimi olarak ürün geliştirme, medikal cihaz şirketlerinde danışmanlık gibi alternatif alanlarda çalışabilirler.",
+        "Akademik kariyer isteyenler üniversitelerde araştırma görevlisi ya da öğretim üyesi olabilir."
+    ]
+},
+{
+    "id": 15,
+    "name": "Eczacılık",
+    "duration": "5 yıl",
+    "courses": [
+        "Eczacılık eğitimi biyoloji, kimya ve anatomi gibi temel sağlık bilimleriyle başlar.",
+        "Farmasötik kimya ve farmakoloji dersleri ilaç yapısı ve etkileri hakkında bilgi sağlar.",
+        "Eczacılık teknolojisi derslerinde ilaç üretimi, formülasyonu ve kalite kontrol öğretilir.",
+        "Farmakognozi dersinde bitkisel kökenli ilaçlar tanıtılır, analiz teknikleri geliştirilir.",
+        "Halk sağlığı, toksikoloji ve ilaç etkileşimleri gibi konularla eczacının sağlık içindeki rolü vurgulanır.",
+        "Reçete okuma, hasta danışmanlığı ve ilaç takip sistemleri pratik olarak öğretilir.",
+        "Stajlar ile hem hastane hem de serbest eczanelerde saha deneyimi kazanılır."
+    ],
+    "structure": [
+        "Eğitim süreci dönemliktir ve ilk 3 yıl teorik bilgilerle donatılır.",
+        "4. ve 5. sınıfta uygulamalı laboratuvar dersleri ve staj ağırlıklı program uygulanır.",
+        "Her ders dönemi farmasötik üretim, analiz ve danışmanlık yönünden bütüncül bir yaklaşım sunar.",
+        "Klinik eczacılık dersleriyle hastane ortamında ilaç takibi ve hasta etkileşimi öğretilir.",
+        "Sosyal eczacılık ve halk sağlığı dersleriyle toplumda sağlık bilinci oluşturma hedeflenir.",
+        "Üniversitelerin araştırma laboratuvarlarında öğrenciler araştırma projelerine katılabilir.",
+        "Bitirme projesiyle öğrenciler ilaç geliştirme veya analiz temelli bir çalışma yürütür."
+    ],
+    "careers": [
+        "Eczacılık mezunları serbest eczane açabilir veya mevcut eczanelerde çalışabilir.",
+        "Hastanelerde klinik eczacı olarak ilaç yönetimi süreçlerine katılabilirler.",
+        "İlaç firmalarında üretim, kalite kontrol, Ar-Ge ve ruhsatlandırma gibi alanlarda görev alabilirler.",
+        "Bitkisel ürün geliştirme, dermokozmetik ve besin takviyeleri üzerine çalışabilirler.",
+        "Kamu kurumlarında uzman eczacı veya denetçi olarak görev alabilirler.",
+        "Yüksek lisans ve doktora ile akademik kariyer yaparak üniversitelerde öğretim görevlisi olabilirler.",
+        "Yurt dışında çalışmak isteyen mezunlar denklik alarak uluslararası eczacılık alanlarında da yer alabilirler."
+    ]
+},
+
+"id",13,
+"name", "Hemşirelik",
+"duration", "4 yıl",
+"courses",[
+    "Hemşirelik eğitimi, temel tıp bilimleriyle başlar; anatomi, fizyoloji ve mikrobiyoloji ilk yıllarda öğretilir.",
+    "Hemşirelik esasları dersi, bakım süreçlerini ve etik yaklaşımları tanıtır.",
+    "İç hastalıkları hemşireliği ve cerrahi hemşireliği gibi klinik dersler, hastalıkların hemşirelik yönünden ele alınmasını sağlar.",
+    "Pediatri, kadın doğum ve ruh sağlığı hemşireliği gibi alan dersleriyle özel hasta grupları tanıtılır.",
+    "İlaç uygulama teknikleri, serum takibi, yara bakımı gibi beceriler laboratuvar ortamında kazandırılır.",
+    "Toplum sağlığı hemşireliği ile koruyucu sağlık hizmetleri ve saha çalışmaları öğretilir.",
+    "Klinik stajlarla öğrenciler hastanelerde aktif görev alarak hasta bakımını doğrudan deneyimler."
+],
+"structure", [
+    "Eğitim 8 dönemliktir ve her dönemde hem teorik hem uygulamalı dersler yer alır.",
+    "İlk iki yılda temel tıp bilgisi ve hemşirelik giriş dersleri ağırlıktadır.",
+    "3. ve 4. sınıflarda öğrenciler klinik uygulamalara yönelir ve aktif hasta bakımına başlar.",
+    "Her öğrenci belirli hastane rotasyonlarında görev alarak farklı branşları tanır.",
+    "Etik, iletişim, liderlik ve hasta hakları gibi mesleki gelişim dersleri de verilir.",
+    "Toplum sağlığı stajı ile hem kırsal hem de kentsel bölgelerde saha deneyimi kazandırılır.",
+    "Son sınıfta kapsamlı staj ve vaka sunumları ile profesyonel sorumluluklar üstlenilir."
+],
+"careers",
+    "Mezunlar devlet hastaneleri, üniversite hastaneleri ve özel hastanelerde hemşire olarak görev alabilir.",
+    "Yoğun bakım, acil servis, pediatri ve ameliyathane gibi branşlarda uzmanlaşabilirler.",
+    "Toplum sağlığı merkezlerinde, okul sağlığı ve evde bakım birimlerinde çalışabilirler.",
+    "Yüksek lisans yapanlar eğitici hemşire, akademisyen ya da yönetici pozisyonlarına geçebilir.",
+    "Sağlık politikası ve halk sağlığı alanlarında danışmanlık ve proje yürütücülüğü yapabilirler.",
+    "Yurt dışında denkliğini alarak farklı ülkelerde hemşirelik yapma fırsatı bulunur.",
+    "Özel klinik, huzurevi, rehabilitasyon merkezi gibi alanlarda da iş bulabilirler."
+]
+

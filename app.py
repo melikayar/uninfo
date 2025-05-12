@@ -1,0 +1,30 @@
+from flask import Flask, render_template, request
+import json
+import os
+
+app = Flask(__name__)
+
+def load_departments():
+    with open("data/departments.json", "r", encoding="utf-8") as f:
+        return json.load(f)
+
+@app.route("/")
+def index():
+    departments = load_departments()
+    query = request.args.get("q", "").lower()
+    if query:
+        departments = [d for d in departments if query in d["name"].lower()]
+    return render_template("index.html", departments=departments)
+
+@app.route("/bolum/<int:id>")
+def detail(id):
+    departments = load_departments()
+    department = next((d for d in departments if d["id"] == id), None)
+    if not department:
+        return "Bölüm bulunamadı", 404
+    return render_template("detail.html", department=department)
+
+if __name__ == "__main__":
+    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=10000)
