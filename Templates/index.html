@@ -29,17 +29,16 @@
             <button type="submit">Ara</button>
         </form>
     </div>
-
-    <!-- BÖLÜM KARTLARI -->
-    <div class="department-grid">
-        {% for d in departments %}
-      <div class="department-card" style="background-color: hsl(200, 70%, 90%)">
-
-            <a href="/bolum/{{ d.id }}">{{ d.name }}</a>
-            <p class="year-text">{{ d.duration }}</p>
-        </div>
-        {% endfor %}
+    
+<div class="department-grid">
+    {% for d in departments %}
+    <div class="department-card">
+        <a href="/bolum/{{ d.id }}">{{ d.name }}</a>
+        <p class="year-text">{{ d.duration }}</p>
     </div>
+    {% endfor %}
+</div>
+
 
 </body>
 </html>
