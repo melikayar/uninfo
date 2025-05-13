@@ -95,27 +95,23 @@ form button {
 form button:hover {
     background-color: #005ea8;
 }
-
-/* BÖLÜMLER KARTLARI */
 .department-grid {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
-    gap: 16px;
-    padding: 20px 30px 60px;
+    padding: 20px;
 }
 
 .department-card {
-    flex: 1 1 220px;
-    max-width: 220px;
-    background-color: #d0e7ff;
+    background-color: #d4ecf7;
+    border-radius: 10px;
     padding: 20px;
+    width: 200px;
     text-align: center;
     font-weight: bold;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    transition: transform 0.2s;
 }
+
 
 .department-card:hover {
     transform: translateY(-4px);
