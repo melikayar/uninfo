@@ -421,35 +421,36 @@
         "Yurt dışında çalışmak isteyen mezunlar denklik alarak uluslararası eczacılık alanlarında da yer alabilirler."
     ]
 },
-
-"id",13,
-"name", "Hemşirelik",
-"duration", "4 yıl",
-"courses",[
-    "Hemşirelik eğitimi, temel tıp bilimleriyle başlar; anatomi, fizyoloji ve mikrobiyoloji ilk yıllarda öğretilir.",
-    "Hemşirelik esasları dersi, bakım süreçlerini ve etik yaklaşımları tanıtır.",
-    "İç hastalıkları hemşireliği ve cerrahi hemşireliği gibi klinik dersler, hastalıkların hemşirelik yönünden ele alınmasını sağlar.",
-    "Pediatri, kadın doğum ve ruh sağlığı hemşireliği gibi alan dersleriyle özel hasta grupları tanıtılır.",
-    "İlaç uygulama teknikleri, serum takibi, yara bakımı gibi beceriler laboratuvar ortamında kazandırılır.",
-    "Toplum sağlığı hemşireliği ile koruyucu sağlık hizmetleri ve saha çalışmaları öğretilir.",
-    "Klinik stajlarla öğrenciler hastanelerde aktif görev alarak hasta bakımını doğrudan deneyimler."
-],
-"structure", [
-    "Eğitim 8 dönemliktir ve her dönemde hem teorik hem uygulamalı dersler yer alır.",
-    "İlk iki yılda temel tıp bilgisi ve hemşirelik giriş dersleri ağırlıktadır.",
-    "3. ve 4. sınıflarda öğrenciler klinik uygulamalara yönelir ve aktif hasta bakımına başlar.",
-    "Her öğrenci belirli hastane rotasyonlarında görev alarak farklı branşları tanır.",
-    "Etik, iletişim, liderlik ve hasta hakları gibi mesleki gelişim dersleri de verilir.",
-    "Toplum sağlığı stajı ile hem kırsal hem de kentsel bölgelerde saha deneyimi kazandırılır.",
-    "Son sınıfta kapsamlı staj ve vaka sunumları ile profesyonel sorumluluklar üstlenilir."
-],
-"careers",
-    "Mezunlar devlet hastaneleri, üniversite hastaneleri ve özel hastanelerde hemşire olarak görev alabilir.",
-    "Yoğun bakım, acil servis, pediatri ve ameliyathane gibi branşlarda uzmanlaşabilirler.",
-    "Toplum sağlığı merkezlerinde, okul sağlığı ve evde bakım birimlerinde çalışabilirler.",
-    "Yüksek lisans yapanlar eğitici hemşire, akademisyen ya da yönetici pozisyonlarına geçebilir.",
-    "Sağlık politikası ve halk sağlığı alanlarında danışmanlık ve proje yürütücülüğü yapabilirler.",
-    "Yurt dışında denkliğini alarak farklı ülkelerde hemşirelik yapma fırsatı bulunur.",
-    "Özel klinik, huzurevi, rehabilitasyon merkezi gibi alanlarda da iş bulabilirler."
+{
+    "id": 13,
+    "name": "Hemşirelik",
+    "duration": "4 yıl",
+    "courses": [
+        "Hemşirelik eğitimi, temel tıp bilimleriyle başlar; anatomi, fizyoloji ve mikrobiyoloji ilk yıllarda öğretilir.",
+        "Hemşirelik esasları dersi, bakım süreçlerini ve etik yaklaşımları tanıtır.",
+        "İç hastalıkları hemşireliği ve cerrahi hemşireliği gibi klinik dersler, hastalıkların hemşirelik yönünden ele alınmasını sağlar.",
+        "Pediatri, kadın doğum ve ruh sağlığı hemşireliği gibi alan dersleriyle özel hasta grupları tanıtılır.",
+        "İlaç uygulama teknikleri, serum takibi, yara bakımı gibi beceriler laboratuvar ortamında kazandırılır.",
+        "Toplum sağlığı hemşireliği ile koruyucu sağlık hizmetleri ve saha çalışmaları öğretilir.",
+        "Klinik stajlarla öğrenciler hastanelerde aktif görev alarak hasta bakımını doğrudan deneyimler."
+    ],
+    "structure": [
+        "Eğitim 8 dönemliktir ve her dönemde hem teorik hem uygulamalı dersler yer alır.",
+        "İlk iki yılda temel tıp bilgisi ve hemşirelik giriş dersleri ağırlıktadır.",
+        "3. ve 4. sınıflarda öğrenciler klinik uygulamalara yönelir ve aktif hasta bakımına başlar.",
+        "Her öğrenci belirli hastane rotasyonlarında görev alarak farklı branşları tanır.",
+        "Etik, iletişim, liderlik ve hasta hakları gibi mesleki gelişim dersleri de verilir.",
+        "Toplum sağlığı stajı ile hem kırsal hem de kentsel bölgelerde saha deneyimi kazandırılır.",
+        "Son sınıfta kapsamlı staj ve vaka sunumları ile profesyonel sorumluluklar üstlenilir."
+    ],
+    "careers": [
+        "Mezunlar devlet hastaneleri, üniversite hastaneleri ve özel hastanelerde hemşire olarak görev alabilir.",
+        "Yoğun bakım, acil servis, pediatri ve ameliyathane gibi branşlarda uzmanlaşabilirler.",
+        "Toplum sağlığı merkezlerinde, okul sağlığı ve evde bakım birimlerinde çalışabilirler.",
+        "Yüksek lisans yapanlar eğitici hemşire, akademisyen ya da yönetici pozisyonlarına geçebilir.",
+        "Sağlık politikası ve halk sağlığı alanlarında danışmanlık ve proje yürütücülüğü yapabilirler.",
+        "Yurt dışında denkliğini alarak farklı ülkelerde hemşirelik yapma fırsatı bulunur.",
+        "Özel klinik, huzurevi, rehabilitasyon merkezi gibi alanlarda da iş bulabilirler."
+    ]
+}
 ]
-
