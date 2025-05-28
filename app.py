@@ -30,8 +30,12 @@ if __name__ == "__main__":
 
 @app.route("/fa")
 def index_farsi():
-    departments = load_departments()
+    departments = load_departments_farsi()
     query = request.args.get("q", "").lower()
     if query:
-        departments = [d for d in departments if query in d["name"].lower()]
+        departments = [d for d in departments if query in d["name"]]
     return render_template("index.farsi.html", departments=departments)
+
+def load_departments_farsi():
+    with open("data/departments_farsi.json", "r", encoding="utf-8") as f:
+        return json.load(f)
