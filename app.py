@@ -27,3 +27,11 @@ def detail(id):
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=10000)
+
+@app.route("/fa")
+def index_farsi():
+    departments = load_departments()
+    query = request.args.get("q", "").lower()
+    if query:
+        departments = [d for d in departments if query in d["name"].lower()]
+    return render_template("index.farsi.html", departments=departments)
