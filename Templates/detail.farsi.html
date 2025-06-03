@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ department.name }} | یونیفو</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <h1 style="text-align:center; color:#003366">{{ department.name }}</h1>
+
+    <div class="content-box" style="max-width:800px; margin:auto; font-size:18px; line-height:1.7;">
+        <h2>دروس </h2>
+        {% for line in department.courses %}
+            <p>{{ line }}</p>
+        {% endfor %}
+
+        <h2> ترم‌ها</h2>
+        {% for line in department.structure %}
+            <p>{{ line }}</p>
+        {% endfor %}
+
+        <h2>آیند ه شغلی</h2>
+        {% for line in department.careers %}
+            <p>{{ line }}</p>
+        {% endfor %}
+
+        <a href="/fa">← بازگشت به صفحه اصلی</a>
+    </div>
+
+</body>
+</html>

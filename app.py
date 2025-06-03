@@ -39,3 +39,12 @@ def index_farsi():
 def load_departments_farsi():
     with open("data/departments_farsi.json", "r", encoding="utf-8") as f:
         return json.load(f)
+    
+@app.route("/fa/bolum/<int:id>")
+def detail_farsi(id):
+    with open("data/departments_farsi.json", "r", encoding="utf-8") as f:
+        departments = json.load(f)
+    department = next((d for d in departments if d["id"] == id), None)
+    if not department:
+        return "رشته یافت نشد", 404
+    return render_template("detail.farsi.html", department=department)
