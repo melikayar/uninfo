@@ -37,8 +37,9 @@ def index_farsi():
     return render_template("index.farsi.html", departments=departments)
 
 def load_departments_farsi():
-    with open("data/departments_farsi.json", "r", encoding="utf-8") as f:
+    with open("data/departments_farsi_clean.json", "r", encoding="utf-8") as f:
         return json.load(f)
+
     
 @app.route("/fa/bolum/<int:id>")
 def detail_farsi(id):

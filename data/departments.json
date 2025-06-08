@@ -10,8 +10,7 @@
         "İşletim sistemleri dersi, yazılım ile donanım arasındaki ilişkiyi kavramaya yardımcı olurken; bilgisayar ağları, internet altyapısını anlamayı sağlar.",
         "Yazılım mühendisliği derslerinde ekip çalışmasıyla proje geliştirme süreçleri deneyimlenir.",
         "Son olarak, yapay zeka ve makine öğrenmesi gibi güncel teknolojilerle öğrenciler geleceğin dijital dünyasına hazırlanır."
-    ],
-    "structure": [
+    ],"structure": [
         "Eğitim süreci genellikle güz ve bahar olmak üzere iki ana dönemden oluşur.",
         "Her dönemde zorunlu temel derslerin yanı sıra öğrencilerin ilgi alanlarına göre seçmeli dersler de sunulur.",
         "Teorik derslerin yanı sıra laboratuvar uygulamalarıyla konular pekiştirilir.",
@@ -195,7 +194,6 @@
         "Yurtdışı ofislerde, uluslararası yarışmalarda ve büyük ölçekli projelerde yer alabilirler."
     ]
 },
-
 {
     "id": 7,
     "name": "İç Mimarlık",
@@ -324,7 +322,6 @@
         "Yüksek lisans yaparak akademik kariyere veya iş analitiği, veri bilimi gibi yeni alanlara yönelebilirler."
     ]
 },
-
 {
     "id": 10,
     "name": "Tıp",

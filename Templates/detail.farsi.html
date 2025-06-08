@@ -11,20 +11,25 @@
     <h1 style="text-align:center; color:#003366">{{ department.name }}</h1>
 
     <div class="content-box" style="max-width:800px; margin:auto; font-size:18px; line-height:1.7;">
-        <h2>دروس </h2>
-        {% for line in department.courses %}
-            <p>{{ line }}</p>
-        {% endfor %}
+       <h2>دروس</h2>
+<div>
+  {% for item in department.courses %}
+    <p>{{ item }}</p>
+  {% endfor %}
+</div>
 
-        <h2> ترم‌ها</h2>
-        {% for line in department.structure %}
-            <p>{{ line }}</p>
-        {% endfor %}
-
-        <h2>آیند ه شغلی</h2>
-        {% for line in department.careers %}
-            <p>{{ line }}</p>
-        {% endfor %}
+<h2>ترم‌ها</h2>
+<div>
+  {% for item in department.structure %}
+    <p>{{ item }}</p>
+  {% endfor %}
+</div>
+<h2>آینده شغلی</h2>
+<div>
+  {% for item in department.careers %}
+    <p>{{ item }}</p>
+  {% endfor %}
+</div>
 
         <a href="/fa">← بازگشت به صفحه اصلی</a>
     </div>
