@@ -1,9 +1,7 @@
-# render.yaml
 services:
   - type: web
-    name: uninfoo
+    name: uninfo
     env: python
-    buildCommand: ""
-    startCommand: gunicorn app:app
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
     plan: free
-
