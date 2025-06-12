@@ -1,6 +1,6 @@
 // Butona tıklanınca popup aç/kapa
-
 console.log("Chat.js başarıyla yüklendi");
+
 document.addEventListener("DOMContentLoaded", function () {
     const chatButton = document.getElementById("chatButton");
     const chatPopup = document.getElementById("chatPopup");
