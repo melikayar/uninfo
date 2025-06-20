@@ -449,5 +449,111 @@
         "Yurt dışında denkliğini alarak farklı ülkelerde hemşirelik yapma fırsatı bulunur.",
         "Özel klinik, huzurevi, rehabilitasyon merkezi gibi alanlarda da iş bulabilirler."
     ]
+},
+{
+  "id": 14,
+  "name": "Beslenme ve Diyetetik",
+  "duration": "4 yıl",
+  "courses": [
+    "İlk yıllarda biyokimya, fizyoloji ve beslenme bilimleri gibi temel dersler verilir.",
+    "Öğrenciler enerji, besin öğeleri ve beslenme gereksinimleriyle ilgili temel kavramları öğrenir.",
+    "Tıbbi beslenme tedavisi, diyet planlama ve hastalıklarda beslenme dersleri öğretilir.",
+    "Beslenme ihtiyaçlarının hesaplanması ve diyet hazırlama atölyeleri düzenlenir.",
+    "Gıda hijyeni, beslenme durumu değerlendirme ve toplum sağlığı dersleri verilir."
+  ],
+  "structure": [
+    "Beslenme ve Diyetetik eğitimi lisans düzeyinde 4 yıl (8 dönem) sürer.",
+    "İlk yıllarda temel bilimler ve biyolojik derslere ağırlık verilir.",
+    "Orta dönemlerde uygulamalı eğitimler ve diyet tedavisi başlar.",
+    "Son yıllarda hastane, klinik ve toplum sağlığı merkezlerinde staj yapılır.",
+    "Eğitim programı sonunda beslenme sorunları üzerine bir bitirme projesi hazırlanır."
+  ],
+  "careers": [
+    "Mezunlar hastane ve kliniklerde diyetisyen olarak görev yapabilir.",
+    "Toplum sağlığı merkezlerinde, okullarda ve bireysel danışmanlıkta çalışabilirler.",
+    "İleri düzey uzmanlıkla hastalara özel diyet programları hazırlayabilirler.",
+    "Gıda sanayiinde kalite kontrol, ürün geliştirme ve araştırma alanlarında çalışabilirler.",
+    "Toplumun sağlıklı beslenmesi için eğitim programlarında yer alabilirler."
+  ]
+},
+{
+  "id": 15,
+  "name": "Çocuk Gelişimi",
+  "duration": "4 yıl",
+  "courses": [
+    "Eğitim, gelişim psikolojisi, çocuk eğitimi ve okul öncesi öğretim dersleriyle başlar.",
+    "Oyun terapisi, özel gereksinimli çocuklar ve dil gelişimi üzerine dersler verilir.",
+    "Öğrenciler çocuk beslenmesi, güvenlik, hijyen ve etkili iletişim gibi konularla tanışır.",
+    "Sanat, müzik ve yaratıcı etkinlikler gibi uygulamalı atölyeler düzenlenir.",
+    "Aile ve toplumun çocuk gelişimindeki rolü üzerine teorik bilgiler aktarılır."
+  ],
+  "structure": [
+    "Bu lisans programı 4 yıl sürer ve teorik, uygulamalı dersler ile staj içerir.",
+    "İlk yıllarda çocuk psikolojisi ve gelişim kuramları ağırlıklıdır.",
+    "İkinci yıldan itibaren çocuk gelişim merkezleri ve anaokullarında saha çalışmaları yapılır.",
+    "Sınıf içi projeler ve çocukların bilişsel, sosyal ve dil gelişimi analiz edilir.",
+    "Program sonunda çocuk gelişimiyle ilgili bir uygulama projesi veya bitirme tezi hazırlanır."
+  ],
+  "careers": [
+    "Mezunlar kreş ve anaokullarında öğretmen veya eğitici olarak çalışabilir.",
+    "Aile danışma merkezleri ve oyun terapisi merkezlerinde görev alabilirler.",
+    "Okullarda ve çocuk destek merkezlerinde gelişim uzmanı olarak çalışabilirler.",
+    "Sosyal hizmet kuruluşları, vakıflar ve çocuk odaklı STK’larda görev alabilirler.",
+    "Yüksek lisans yaparak akademik kariyer veya üniversitelerde öğretim görevlisi olabilirler."
+  ]
+},
+{
+  "id": 16,
+  "name": "Diş Protez Teknolojisi",
+  "duration": "2 yıl (önlisans)",
+  "courses": [
+    "Eğitim, ağız ve diş anatomisi, dental materyaller ve temel protez bilgisiyle başlar.",
+    "Sabit ve hareketli protezlerin tasarımı, üretimi ve bakımı öğretilir.",
+    "Diş kalıbı alma ve protez yapımı atölye çalışmalarıyla desteklenir.",
+    "Köprü, kuron, total ve parsiyel protez gibi uygulamalar detaylı şekilde işlenir.",
+    "İş güvenliği, teknik cihazlar ve laboratuvar ergonomisi de müfredatta yer alır."
+  ],
+  "structure": [
+    "Program genellikle 2 yıl sürer ve teorik + uygulamalı eğitim içerir.",
+    "İlk dönemlerde temel bilgiler ve ekipmanlarla tanışma sağlanır.",
+    "İkinci yılda uygulamalı laboratuvar dersleri yoğunlaşır.",
+    "Öğrenciler gerçek hasta protezleri üzerinde uygulamalı çalışmalar yapar.",
+    "Eğitim, kliniklerde yapılan staj ve final projesiyle tamamlanır."
+  ],
+  "careers": [
+    "Mezunlar diş protez teknisyeni olarak laboratuvarlarda çalışabilir.",
+    "Diş hekimleriyle birlikte kuron, köprü ve total protez yapımında görev alabilirler.",
+    "Devlet ve özel kliniklerde, hastanelerde iş imkânı bulabilirler.",
+    "Kendi diş protez laboratuvarlarını açabilirler.",
+    "Eğitimlerini tamamlayarak diş hekimliği ya da ileri dental teknolojiye geçiş yapabilirler."
+  ]
+},
+{
+  "id": 17,
+  "name": "Fizyoterapi ve Rehabilitasyon",
+  "duration": "4 yıl",
+  "courses": [
+    "Eğitim; uygulamalı anatomi, hareket fizyolojisi ve biyomekanikle başlar.",
+    "Elektroterapi, egzersiz tedavisi ve manuel terapi gibi uygulamalı dersler verilir.",
+    "Öğrenciler rehabilitasyon cihazları ve klinik araçlarla tanıştırılır.",
+    "Atölyelerde masaj, düzeltici egzersizler ve motor beceri eğitimi yapılır.",
+    "Nörolojik, kas-iskelet ve yaşlı sağlığıyla ilgili hastalıklar da müfredata dahildir."
+  ],
+  "structure": [
+    "Program 4 yıl (8 dönem) sürer; teorik ve pratik eğitim birlikte yürütülür.",
+    "İlk dönemlerde insan fizyolojisi ve anatomi temelleri verilir.",
+    "Orta dönemlerde klinik staj ve hasta uygulamaları başlar.",
+    "Öğrenciler, uzman gözetiminde hastanelerde uygulamalı eğitim alırlar.",
+    "Final döneminde klinik vaka analizi veya proje çalışması yapılır."
+  ],
+  "careers": [
+    "Mezunlar fizyoterapist olarak hastaneler, klinikler ve spor merkezlerinde çalışabilir.",
+    "Rehabilitasyon merkezleri, yaşlı bakım evleri ve özel eğitim kurumlarında görev alabilirler.",
+    "Nöroloji, ortopedi ve pediatri alanlarında uzmanlaşabilirler.",
+    "Spor kulüplerinde, wellness merkezlerinde veya kendi merkezlerinde çalışabilirler.",
+    "Akademik kariyer yapmak isteyenler yüksek lisans ve doktora yoluna devam edebilir."
+  ]
 }
+
+
 ]
