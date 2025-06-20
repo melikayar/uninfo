@@ -148,5 +148,8 @@
   z-index: 2;
   position: relative;
 }
+html[dir="rtl"] body {
+    font-family: 'Vazirmatn', sans-serif;
+}
 
 
