@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-<body>
 
     <!-- DİL DEĞİŞTİRME BUTONU -->
     <div class="lang-toggle">
@@ -47,7 +46,19 @@
     </div>
     {% endfor %}
 </div>
+<!-- Chat Button -->
+<div id="chatButton" style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 30px; z-index: 999;">
+    💬
+</div>
 
-
+<!-- Chat Popup -->
+<div id="chatPopup" style="display: none; position: fixed; bottom: 90px; right: 20px; width: 300px; background-color: white; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2); z-index: 999;">
+    <div style="padding: 10px; border-bottom: 1px solid #ddd; font-weight: bold;">Online Danışman</div>
+    <div style="padding: 10px;">
+        <textarea id="chatMessage" placeholder="Mesajınızı yazın..." style="width: 100%; height: 60px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+        <button onclick="sendToWhatsApp()" style="margin-top: 10px; width: 100%; background-color: #25D366; color: white; border: none; border-radius: 5px; padding: 8px;">Gönder</button>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='chat.js') }}"></script>
 </body>
 </html>
