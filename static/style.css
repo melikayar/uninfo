@@ -156,62 +156,6 @@ html[dir="rtl"] body {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
-/* Özel Üniversiteler Alanı */
-.private-universities {
-  padding: 60px 20px;
-  background-color: #f2f9ff;
-  text-align: center;
-}
-
-.private-universities h2 {
-  font-size: 28px;
-  color: #003366;
-  margin-bottom: 30px;
-}
-
-.logo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo-item {
-  position: relative;
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  background: radial-gradient(circle at center, #005599 40%, #d0e7ff 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s;
-}
-
-.logo-item img {
-  width: 60%;
-  height: auto;
-  border-radius: 50%;
-  transition: transform 0.3s;
-}
-
-.logo-item:hover {
-  transform: scale(1.1);
-}
-
-.logo-item:hover img {
-  transform: scale(1.2);
-}
-
-.logo-item span {
-  display: block;
-  margin-top: 12px;
-  font-size: 16px;
-  color: #003366;
-  font-weight: 600;
-}
-
 /* Mobil uyum */
 @media (max-width: 768px) {
   .logo-item {
@@ -231,8 +175,6 @@ html[dir="rtl"] body {
     font-size: 20px;
   }
 }
-/* style.css dosyanızın en altına ekleyin */
-
 @media (max-width: 768px) {
   /* HEADER yükseklik ve yazı boyutları */
   header {
@@ -308,11 +250,11 @@ html[dir="rtl"] body {
     font-size: 14px;
   }
 }
+/* Özel Üniversiteler Alanı -  */
 
-/* Üniversite logoları alanı */
 .private-universities {
-  background-color: #f0f8ff;
-  padding: 40px 20px;
+  padding: 60px 20px;
+  background-color: #f2f9ff;
   text-align: center;
 }
 
@@ -325,8 +267,9 @@ html[dir="rtl"] body {
 .logo-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 30px;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo-item {
@@ -346,7 +289,7 @@ html[dir="rtl"] body {
   position: absolute;
   width: 110px;
   height: 110px;
-  background-color: #cce6ff;
+  background-color: #cce6ff; /* açık mavi */
   border-radius: 50%;
   z-index: 0;
 }
@@ -356,7 +299,7 @@ html[dir="rtl"] body {
   position: absolute;
   width: 90px;
   height: 90px;
-  background-color: #003366;
+  background-color: rgba(0, 51, 102, 0.6); /* koyu mavi %60 opaklık */
   border-radius: 50%;
   z-index: 1;
 }
@@ -381,4 +324,25 @@ html[dir="rtl"] body {
 
 .logo-item:hover {
   transform: scale(1.1);
+}
+
+/* Mobil uyum */
+@media (max-width: 768px) {
+  .logo-item {
+    width: 90px;
+    height: 90px;
+  }
+
+  .logo-item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-item span {
+    font-size: 13px;
+  }
+
+  .private-universities h2 {
+    font-size: 20px;
+  }
 }
