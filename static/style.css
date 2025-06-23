@@ -292,6 +292,15 @@ html[dir="rtl"] body {
 .logo-item img:hover {
   transform: scale(1.15);
 }
+.logo-item::before {
+  width: 120px;
+  height: 120px;
+}
+
+.logo-item::after {
+  width: 100px;
+  height: 100px;
+}
 
 .logo-item span {
   margin-top: 10px;
