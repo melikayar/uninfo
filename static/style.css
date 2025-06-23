@@ -278,16 +278,15 @@ html[dir="rtl"] body {
   text-align: center;
   transition: transform 0.3s ease;
 }
-
 .logo-item img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   border-radius: 50%;
-  border: 10px solid rgba(0, 51, 102, 0.6); /* %60 opak koyu mavi */
-  background-color: #a9c5e8; /* açık mavi arka plan */
-  padding: 5px;
-  transition: transform 0.3s ease;
+  background-color: white;
+  padding: 6px;
+  z-index: 2;
+  transition: transform 0.3s;
 }
 
 .logo-item img:hover {
