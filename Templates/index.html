@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-
     <!-- DİL DEĞİŞTİRME BUTONU -->
     <div class="lang-toggle">
         <a href="/fa">
@@ -28,12 +27,10 @@
         </div>
     </header>
 
-<!-- YENİ BAŞLIK BLOĞU -->
 <div style="text-align: center; margin-top: 40px;">
   <h1 style="font-size: 32px; color: #003366;">Türkiye’deki Üniversite Bölümleri</h1>
   <p style="font-size: 18px; color: #555;">Hangi Bölüm Sana Uygun? Ara, İncele, Karar Ver.</p>
 </div>
-
     <!-- ARAMA KUTUSU -->
     <div class="search-container">
         <form method="GET">
@@ -99,11 +96,9 @@
     <div class="logo-item" style="text-align: center;">
       <img src="/static/biruni.png" alt="Biruni Üniversitesi" style="width: 100px; border-radius: 50%; border: 12px solid #3b5998; background: #a9c5e8;">
       <div style="margin-top: 8px; font-weight: bold;">Biruni Üniversitesi</div>
-    </div>
-
+    </div> 
   </div>
 </section>
-
 <script src="{{ url_for('static', filename='chat.js') }}"></script>
 </body>
 </html>

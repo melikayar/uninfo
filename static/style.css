@@ -378,3 +378,28 @@ html[dir="rtl"] body {
   .private-universities h2 {
     font-size: 20px;
   }
+
+.majors-title{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin-top:24px;
+  direction:rtl;
+}
+
+.majors-title__logo{
+  width:40px;
+  height:auto;
+  object-fit:contain;
+}
+
+.majors-title__text{
+  font-size: clamp(20px, 2.6vw, 32px);
+  font-weight: 800;
+  margin:0;
+}
+
+@media (max-width:480px){
+  .majors-title__logo{ width:28px; }
+}
