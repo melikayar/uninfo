@@ -10,14 +10,14 @@ body {
   color: #1a1a1a;
 }
 
-/* Container: مرکزچین و محدودکننده عرض */
+/* Container */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 16px;
 }
 
-/* لینک‌ها */
+/* Links */
 a { color: inherit; text-decoration: none; }
 
 /* =======================
@@ -26,7 +26,7 @@ a { color: inherit; text-decoration: none; }
 header {
   position: relative;
   min-height: 420px;
-  background-image: url("/static/uninfocover.jpg");  /* مسیر همه عکس‌ها: /static/ */
+  background-image: url("/static/uninfocover.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -35,22 +35,13 @@ header {
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
   background: rgba(0, 51, 102, 0.65);
-  color: #fff;
-  text-align: center;
+  color: #fff; text-align: center;
   padding: 0 16px;
 }
-.header-title {
-  font-size: 60px;
-  margin: 0;
-  color: #fff;
-}
-.header-sub {
-  font-size: 20px;
-  margin: 10px 0 0;
-  color: #eaf4ff;
-}
+.header-title { font-size: 60px; margin: 0; color: #fff; }
+.header-sub   { font-size: 20px; margin: 10px 0 0; color: #eaf4ff; }
 
-/* برچسب‌های مقطع (لیسانس/فوق‌دیپلم/...) */
+/* Degree chips */
 .type-menu {
   display: flex; justify-content: center; flex-wrap: wrap;
   gap: 20px; margin-top: 25px;
@@ -64,16 +55,8 @@ header {
 .type-box:hover { background: #002244; }
 
 /* =======================
-   MAJORS TITLE + PRESTIGE LOGO
+   MAJORS TITLE
 ======================= */
-/* HTML نمونه:
-<div class="container">
-  <div class="majors-title">
-    <h2 class="majors-title__text">رشته های دانشگاه ها در ترکیه</h2>
-    <img class="majors-title__logo" src="/static/Prestige.logo.png" alt="Prestige Logo">
-  </div>
-</div>
-*/
 .majors-title {
   display: flex; align-items: center; justify-content: center;
   gap: 12px; text-align: center;
@@ -83,14 +66,22 @@ header {
   font-size: clamp(22px, 2.8vw, 34px);
   font-weight: 800; margin: 0; color: #1a1a1a;
 }
-.majors-title__logo {
-  width: 56px; height: 56px; object-fit: contain; display: block;
+
+/* Prestige logo */
+.logo-prestige{
+  height: 90px !important;   /* تغییر بده: 80/90/100px */
+  width: auto !important;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+}
+header .logo-prestige,
+.navbar-brand .logo-prestige{
+  max-height: none !important;
 }
 
 /* زیرتیتر */
-.majors-sub {
-  text-align: center; color: #333; margin: 6px 0 20px;
-}
+.majors-sub { text-align: center; color: #333; margin: 6px 0 20px; }
 
 /* =======================
    SEARCH BOX
@@ -109,8 +100,7 @@ header {
 }
 .search-input {
   padding: 12px; width: 65%;
-  border: 1px solid #ccd6e0; border-radius: 6px; outline: none;
-  background: #fff;
+  border: 1px solid #ccd6e0; border-radius: 6px; outline: none; background: #fff;
 }
 .search-btn {
   padding: 12px 20px; border: 0; border-radius: 6px; cursor: pointer;
@@ -119,7 +109,7 @@ header {
 .search-btn:hover { background: #005ea8; }
 
 /* =======================
-   DEPARTMENTS GRID (کارت رشته‌ها)
+   DEPARTMENTS GRID
 ======================= */
 .department-grid {
   display: flex; flex-wrap: wrap;
@@ -127,13 +117,9 @@ header {
   padding: 20px 0 40px;
 }
 .department-card {
-  width: 220px;
-  background: #d4ecf7;
-  border-radius: 12px;
-  padding: 18px;
-  text-align: center;
-  font-weight: 700;
-  transition: transform .2s ease, box-shadow .2s ease;
+  width: 220px; background: #d4ecf7; border-radius: 12px;
+  padding: 18px; text-align: center; font-weight: 700;
+  transition: transform .2s, box-shadow .2s;
   box-shadow: 0 4px 14px rgba(0,0,0,.05);
 }
 .department-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.08); }
@@ -141,22 +127,8 @@ header {
 .department-card .year-text { font-size: 14px; color: #444; }
 
 /* =======================
-   PRIVATE UNIVERSITIES (لوگوهای مربعی)
+   PRIVATE UNIVERSITIES
 ======================= */
-/* HTML نمونه:
-<section class="private-universities">
-  <div class="container">
-    <h2 class="section-title">دانشگاه‌های خصوصی</h2>
-    <div class="logo-grid">
-      <div class="uni-card">
-        <img class="uni-logo" src="/static/universities/istanbul.png" alt="Istanbul University">
-        <span class="uni-name">دانشگاه استانبول</span>
-      </div>
-      ...
-    </div>
-  </div>
-</section>
-*/
 .private-universities { background: #f2f9ff; padding: 60px 0; }
 .section-title { text-align: center; font-size: 28px; color: #003366; margin: 0 0 30px; }
 
@@ -165,28 +137,20 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 24px; align-items: start; justify-items: center;
 }
-.uni-card {
-  display: flex; flex-direction: column; align-items: center; gap: 10px;
-  text-align: center;
-}
+.uni-card { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
 .uni-logo {
-  width: 140px; aspect-ratio: 1 / 1;               /* مربع واقعی */
-  object-fit: contain;
-  background: #fff;
-  border: 2px solid #e9eef5;
-  border-radius: 12px;                              /* اگر مربع تیز می‌خوای: 0 */
-  padding: 14px;
-  box-shadow: 0 6px 20px rgba(0,0,0,.06);
-  transition: transform .2s ease;
+  width: 140px; aspect-ratio: 1/1; object-fit: contain; background: #fff;
+  border: 2px solid #e9eef5; border-radius: 12px; padding: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.06); transition: transform .2s;
 }
 .uni-logo:hover { transform: translateY(-2px) scale(1.03); }
 .uni-name { font-size: 16px; font-weight: 700; color: #003366; }
 
 /* =======================
-   LANGUAGE TOGGLE (پرچم‌ها)
+   LANGUAGE TOGGLE
 ======================= */
 .lang-toggle {
-  position: absolute; top: 15px; left: 15px;    /* برای RTL: گوشه چپ مناسب‌تر است */
+  position: absolute; top: 15px; left: 15px;
   display: flex; gap: 10px; z-index: 5;
 }
 .lang-toggle img { width: 30px; height: auto; cursor: pointer; }
@@ -194,25 +158,25 @@ header {
 /* =======================
    RESPONSIVE
 ======================= */
-@media (max-width: 992px) {
+@media (max-width: 992px){
   .header-title { font-size: 48px; }
 }
-@media (max-width: 768px) {
+@media (max-width: 768px){
   header { min-height: 300px; }
   .header-title { font-size: 36px; }
-  .header-sub { font-size: 16px; }
+  .header-sub   { font-size: 16px; }
 
   .type-menu { flex-direction: column; gap: 10px; margin-top: 15px; }
-  .type-box { font-size: 16px; padding: 10px 20px; }
+  .type-box  { font-size: 16px; padding: 10px 20px; }
 
   .search-container { max-width: 92%; padding: 16px; }
   .search-input { width: 100%; }
-  .search-btn { width: 100%; }
+  .search-btn   { width: 100%; }
 
   .department-grid { flex-direction: column; align-items: center; }
   .department-card { width: 92%; }
 
-  .majors-title__logo { width: 84px; height: 84px; }
-  .section-title { font-size: 22px; }
-  .uni-logo { width: 110px; padding: 10px; }
+  /* Prestige logo smaller on mobile */
+  .logo-prestige{ height: 72px !important; }
 }
+ 
