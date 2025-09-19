@@ -1,411 +1,174 @@
-    /* GENEL */
-    body {
-        font-family: 'Segoe UI', sans-serif;
-        margin: 0;
-        background-color: #f0f8ff;
-    }
-
-    /* HEADER - Kapak görseli + mavi overlay */
-    header {
-        position: relative;
-        background-image: url("/static/uninfocover.jpg");
-        background-size: cover;
-        background-position: center;
-        height: 420px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .header-overlay {
-        background-color: rgba(0, 51, 102, 0.7); /* koyu mavi %70 */
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    /* UNIFO yazısı */
-    .logo {
-        font-size: 60px;
-        margin: 0;
-    }
-
-    header p {
-        font-size: 20px;
-        margin-top: 10px;
-    }
-
-    /* ETİKET MENÜSÜ (Lisans / Önlisans...) */
-    .type-menu {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
-        margin-top: 25px;
-    }
-
-    .type-box {
-        background-color: #003366;
-        color: white;
-        padding: 12px 28px;
-        border-radius: 30px;
-        font-weight: bold;
-        font-size: 18px;
-        transition: background 0.2s;
-    }
-
-    .type-box:hover {
-        background-color: #002244;
-    }
-
-    /* ARAMA ALANI */
-    .search-container {
-        text-align: center;
-        margin: 40px auto 20px;
-        background-color: #e6f1fb;
-        padding: 20px;
-        border-radius: 12px;
-        max-width: 600px;
-    }
-
-    form input[type="text"] {
-        padding: 12px;
-        width: 65%;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-    }
-
-    form button {
-        padding: 12px 20px;
-        background-color: #0077cc;
-        color: white;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        margin-left: 8px;
-    }
-
-    form button:hover {
-        background-color: #005ea8;
-    }
-    .department-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        padding: 20px;
-    }
-
-    .department-card {
-        background-color: #d4ecf7;
-        border-radius: 10px;
-        padding: 20px;
-        width: 200px;
-        text-align: center;
-        font-weight: bold;
-    }
-
-
-    .department-card:hover {
-        transform: translateY(-4px);
-    }
-
-    .department-card a {
-        text-decoration: none;
-        color: #003366;
-        font-size: 18px;
-        display: block;
-        margin-bottom: 6px;
-    }
-
-    .department-card .year-text {
-        font-size: 14px;
-        color: #444;
-    }
-    .lang-toggle {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        display: flex;
-        gap: 10px;
-    }
-
-    .lang-toggle img {
-        width: 30px;
-        height: auto;
-        cursor: pointer;
-    }
-    .main-headline {
-  text-align: center;
-  margin-top: 40px;
-  z-index: 2;
-  position: relative;
-}
-html[dir="rtl"] body {
-    font-family: 'Vazirmatn', sans-serif;
-}
-
-.logo-item img:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
-}
-/* Mobil uyum */
-@media (max-width: 768px) {
-  .logo-item {
-    width: 90px;
-    height: 90px;
-  }
-
-  .logo-item img {
-    width: 60%;
-  }
-
-  .logo-item span {
-    font-size: 14px;
-  }
-
-  .private-universities h2 {
-    font-size: 20px;
-  }
-}
-@media (max-width: 768px) {
-  /* HEADER yükseklik ve yazı boyutları */
-  header {
-    height: 300px;
-  }
-
-  .logo {
-    font-size: 36px;
-  }
-
-  header p {
-    font-size: 16px;
-  }
-
-  .type-menu {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
-  }
-
-  .type-box {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-
-  .search-container {
-    padding: 15px;
-    max-width: 90%;
-  }
-
-  form input[type="text"] {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  form button {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .department-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .department-card {
-    width: 90%;
-  }
-
-  .lang-toggle {
-    top: 10px;
-    right: 10px;
-  }
-
-  #chatButton {
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-  }
-
-  #chatPopup {
-    width: 90%;
-    right: 5%;
-  }
-}
-
-@media (max-width: 768px) {
-  .search-title h1 {
-    font-size: 24px;
-  }
-
-  .search-title p {
-    font-size: 14px;
-  }
-}
-/* Özel Üniversiteler Alanı -  */
-
-.private-universities {
-  padding: 60px 20px;
-  background-color: #f2f9ff;
-  text-align: center;
-}
-
-.private-universities h2 {
-  font-size: 28px;
-  color: #003366;
-  margin-bottom: 30px;
-}
-.logo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.logo-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.logo-item img {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-  z-index: 2;
-  border-radius: 50%;
-  background-color: white;
-  padding: 5px;
-}
-
-
-.logo-item img:hover {
-  transform: scale(1.15);
-}
-.logo-item::before {
-  width: 110px;
-  height: 110px;
-  background-color: #cce6ff;
-  border-radius: 50%;
-  z-index: 0;
-}
-
-.logo-item::after {
-  width: 100px;
-  height: 100px;
-  background-color: rgba(0, 51, 102, 0.6); /* %60 koyu mavi */
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.logo-item span {
-  margin-top: 10px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #003366;
-}
-
-
-/* Mobil uyum */
-@media (max-width: 768px) {
-  .logo-item {
-    width: 80px;
-    height: 80px;
-  }
-
-  .logo-item img {
-    width: 55%;
-  }
-}
-
-  .logo {
-  display: block;
-  font-size: 28px;
-  text-align: center;
-  margin-top: 10px;
-}
-.degree-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
-.degree-buttons button {
-  padding: 8px 16px;
-  font-size: 14px;
-}
-@media (max-width: 768px) {
-  .degree-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-.logo-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  padding: 10px;
-}
-
-.logo-item {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: #e0f0ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-item img {
-  width: 60%;
-}
-
-
-  .private-universities h2 {
-    font-size: 20px;
-  }
-
-.majors-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin: 32px 0 16px;
-  direction: rtl;
-  text-align: center;
-}
-
-.majors-title__logo {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  border-radius: 8px; /* اگر مربع ساده می‌خوای 0 بذار */
-}
-
-.majors-title__text {
-  font-size: clamp(22px, 2.8vw, 34px);
-  font-weight: 800;
+/* ========== GENERAL ========== */
+body {
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  color: #1a1a1a; /* رنگ تیره برای دیده شدن */
+  background-color: #f0f8ff;
+}
+html[dir="rtl"] body { font-family: 'Vazirmatn', sans-serif; }
+
+/* ========== HEADER (kapak + overlay) ========== */
+header{
+  position: relative;
+  background-image: url("/static/uninfocover.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-overlay{
+  position: absolute; inset: 0;
+  background-color: rgba(0, 51, 102, 0.65);
+  color: #fff;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+  padding: 0 16px;
+}
+.logo{ /* UNINFOO yazısı */
+  font-size: 60px;
+  margin: 0;
+  color: #fff;
+}
+header p{ font-size: 20px; margin-top: 10px; color:#eaf4ff; }
+
+/* Etiket menüsü */
+.type-menu{
+  display: flex; justify-content: center; flex-wrap: wrap;
+  gap: 20px; margin-top: 25px;
+}
+.type-box{
+  background-color:#003366; color:#fff;
+  padding:12px 28px; border-radius:30px;
+  font-weight:700; font-size:18px; transition:.2s;
+}
+.type-box:hover{ background-color:#002244; }
+
+/* ========== SEARCH ========== */
+.search-container{
+  text-align:center; margin:40px auto 20px;
+  background:#e6f1fb; padding:20px; border-radius:12px;
+  max-width:600px;
+}
+form input[type="text"]{
+  padding:12px; width:65%; border:1px solid #ccc; border-radius:6px;
+}
+form button{
+  padding:12px 20px; background:#0077cc; color:#fff;
+  border:none; border-radius:6px; cursor:pointer; margin-left:8px;
+}
+form button:hover{ background:#005ea8; }
+
+/* ========== Departments grid ========== */
+.department-grid{
+  display:flex; flex-wrap:wrap; gap:20px; justify-content:center; padding:20px;
+}
+.department-card{
+  background:#d4ecf7; border-radius:10px; padding:20px; width:200px;
+  text-align:center; font-weight:700; transition:transform .2s;
+}
+.department-card:hover{ transform: translateY(-4px); }
+.department-card a{
+  text-decoration:none; color:#003366; font-size:18px; display:block; margin-bottom:6px;
+}
+.department-card .year-text{ font-size:14px; color:#444; }
+
+/* Dil toggles */
+.lang-toggle{
+  position:absolute; top:15px; right:15px; display:flex; gap:10px;
+}
+.lang-toggle img{ width:30px; height:auto; cursor:pointer; }
+
+/* Başlık (sayfa başı) */
+.main-headline{ text-align:center; margin-top:40px; position:relative; z-index:2; }
+
+/* ========== MAJORS TITLE + PRESTIGE LOGO ========== */
+/* HTML:
+<div class="majors-title">
+  <img src="/assets/img/Prestige.logo.png" alt="Prestige Logo" class="majors-title__logo">
+  <h2 class="majors-title__text">رشته های دانشگاه ها در ترکیه</h2>
+</div>
+*/
+.majors-title{
+  display:flex; align-items:center; justify-content:center; gap:12px;
+  margin:32px 0 16px; direction:rtl; text-align:center;
+}
+.majors-title__logo{
+  width:60px; height:60px; object-fit:contain; border-radius:8px;
+}
+.majors-title__text{
+  font-size: clamp(22px, 2.8vw, 34px);
+  font-weight:800; margin:0; color:#1a1a1a;
 }
 
-@media (max-width: 480px) {
-  .majors-title__logo {
-    width: 40px;
-    height: 40px;
-  }
+/* ========== PRIVATE UNIVERSITIES (square logos) ========== */
+/* Yapı:
+<section class="private-universities">
+  <h2>دانشگاه‌های خصوصی</h2>
+  <div class="logo-grid">
+    <div class="uni-card">
+      <img class="uni-logo" src="/assets/img/universities/istanbul.png" alt="Istanbul University">
+      <span class="uni-name">دانشگاه استانبول</span>
+    </div>
+    ...
+  </div>
+</section>
+*/
+.private-universities{
+  padding:60px 20px; background:#f2f9ff; text-align:center;
+}
+.private-universities h2{
+  font-size:28px; color:#003366; margin-bottom:30px;
+}
+
+.logo-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap:24px; align-items:start; justify-items:center;
+}
+
+/* kart */
+.uni-card{
+  display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px;
+}
+
+/* LOGO: kare ve büyük */
+.uni-logo{
+  width:140px; aspect-ratio:1/1; /* kare */
+  object-fit:contain;
+  background:#fff;
+  border:2px solid #e9eef5;
+  border-radius:12px;          /* tamamen kare istersen 0 yap */
+  padding:14px;
+  box-shadow:0 6px 20px rgba(0,0,0,.06);
+  transition: transform .2s ease;
+}
+.uni-logo:hover{ transform: translateY(-2px) scale(1.03); }
+
+.uni-name{
+  font-size:16px; font-weight:700; color:#003366;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px){
+  header{ height:300px; }
+  .logo{ font-size:36px; }
+  header p{ font-size:16px; }
+
+  .type-menu{ flex-direction:column; gap:10px; margin-top:15px; }
+  .type-box{ font-size:16px; padding:10px 20px; }
+
+  .search-container{ padding:15px; max-width:90%; }
+  form input[type="text"]{ width:100%; margin-bottom:10px; }
+  form button{ width:100%; margin-left:0; }
+
+  .department-grid{ flex-direction:column; align-items:center; }
+  .department-card{ width:90%; }
+
+  .lang-toggle{ top:10px; right:10px; }
+
+  .majors-title__logo{ width:40px; height:40px; }
+  .private-universities h2{ font-size:22px; }
+  .uni-logo{ width:110px; padding:10px; }
 }
