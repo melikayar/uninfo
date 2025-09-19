@@ -212,7 +212,7 @@ header {
   .department-grid { flex-direction: column; align-items: center; }
   .department-card { width: 92%; }
 
-  .majors-title__logo { width: 40px; height: 40px; }
+  .majors-title__logo { width: 84px; height: 84px; }
   .section-title { font-size: 22px; }
   .uni-logo { width: 110px; padding: 10px; }
 }
