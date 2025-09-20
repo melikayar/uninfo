@@ -125,67 +125,29 @@ header .logo-prestige,
 .department-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.08); }
 .department-card a { color: #003366; font-size: 18px; display: block; margin-bottom: 6px; }
 .department-card .year-text { font-size: 14px; color: #444; }
-
 /* =======================
-   PRIVATE UNIVERSITIES
+   PRIVATE UNIVERSITIES LOGOS
 ======================= */
-/* بخش لوگو دانشگاه‌ها */
-.universities-logos {
+.private-universities {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* هر ردیف ۴ لوگو */
-  gap: 30px; /* فاصله بین لوگوها */
+  gap: 40px;
   justify-items: center;
   margin-top: 40px;
 }
 
-.universities-logos .logo-item {
+.private-universities .logo-item {
   text-align: center;
-  font-size: 20px; /* سایز متن زیر لوگو */
+  font-size: 20px;   /* متن زیر لوگو بزرگ‌تر */
   font-weight: bold;
 }
 
-.universities-logos .logo-item img {
-  width: 160px;   /* سایز لوگو بزرگ‌تر */
+.private-universities .logo-item img {
+  width: 180px;   /* سایز لوگو بزرگ‌تر */
   height: auto;
   transition: transform 0.3s ease;
 }
 
-.universities-logos .logo-item img:hover {
+.private-universities .logo-item img:hover {
   transform: scale(1.1); /* افکت بزرگ شدن با هاور */
 }
-
-
-/* =======================
-   LANGUAGE TOGGLE
-======================= */
-.lang-toggle {
-  position: absolute; top: 15px; left: 15px;
-  display: flex; gap: 10px; z-index: 5;
-}
-.lang-toggle img { width: 30px; height: auto; cursor: pointer; }
-
-/* =======================
-   RESPONSIVE
-======================= */
-@media (max-width: 992px){
-  .header-title { font-size: 48px; }
-}
-@media (max-width: 768px){
-  header { min-height: 300px; }
-  .header-title { font-size: 36px; }
-  .header-sub   { font-size: 16px; }
-
-  .type-menu { flex-direction: column; gap: 10px; margin-top: 15px; }
-  .type-box  { font-size: 16px; padding: 10px 20px; }
-
-  .search-container { max-width: 92%; padding: 16px; }
-  .search-input { width: 100%; }
-  .search-btn   { width: 100%; }
-
-  .department-grid { flex-direction: column; align-items: center; }
-  .department-card { width: 92%; }
-
-  /* Prestige logo smaller on mobile */
-  .logo-prestige{ height: 72px !important; }
-}
- 
