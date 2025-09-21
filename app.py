@@ -50,3 +50,20 @@ def detail_farsi(id):
     if not department:
         return "رشته یافت نشد", 404
     return render_template("detail.farsi.html", department=department)
+
+
+@app.route("/")
+def home():
+    return render_template  ("home.html")
+
+@app.route("/universities")
+def universities():
+    return render_template("detail.html")  # یا فایل دلخواهت
+
+@app.route("/consult")
+def consult():
+    return "<h1>مشاوره با ما</h1>"
+
+@app.route("/team")
+def team():
+    return "<h1>تیم ما</h1>"

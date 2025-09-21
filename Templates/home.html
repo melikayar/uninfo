@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>یونیفو | صفحه اصلی</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- نوار بالا -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">
+      <img src="{{ url_for('static', filename='Prestige.logo.png') }}" alt="Prestige">
+    </a>
+      <nav class="top-nav">
+        <a href="/">خانه</a>
+        <a href="/detail">رشته‌ها</a>
+        <a href="/universities">دانشگاه‌ها</a>
+        <a href="/consult">مشاوره با ما</a>
+        <a href="/team">تیم ما</a>
+        <a href="/about">درباره ما</a>
+        <a href="/contact">تماس</a>
+        <!-- سوییچر زبان -->
+        <a class="lang" href="/fa">فارسی</a>
+        <a class="lang" href="/tr">Türkçe</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- قهرمان/هِرو شبیه صفحه‌ای که فرستادی -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-text">
+        <h1>بهترین دانشگاه‌های ترکیه برای بورسیه</h1>
+        <p>راهنمای پذیرش، شهریه‌ها، شرایط بورسیه و نکات مهم برای متقاضیان.</p>
+        <a class="btn-primary" href="/detail">مشاهده دانشگاه‌ها</a>
+      </div>
+      <div class="hero-media">
+        <img src="{{ url_for('static', filename='uninfocover.jpg') }}" alt="دانشگاه‌های ترکیه">
+      </div>
+    </div>
+  </section>
+
+  <!-- بخش دسته‌بندی‌ها (sidebar + content) -->
+  <main class="container grid">
+    <aside class="sidebar">
+      <div class="search-box">
+        <input type="text" placeholder="... دنبال چی می‌گردی؟">
+        <button>جستجو</button>
+      </div>
+      <h3>دسته‌ها</h3>
+      <ul class="cats">
+        <li><a href="#">خدمات مشاوره پذیرش</a></li>
+        <li><a href="#">آزمون‌ها و شرایط</a></li>
+        <li><a href="#">معرفی دانشگاه‌های ترکیه</a></li>
+        <li><a href="#">رشته‌های پرطرفدار</a></li>
+      </ul>
+    </aside>
+
+    <section class="content">
+      <article class="card">
+        <h2>راهنمای کامل بورسیه‌های ترکیه</h2>
+        <p>شرایط بورسیه دانشگاه‌های خصوصی و دولتی، مدارک لازم و زمان‌بندی.</p>
+        <a href="/detail">ادامه مطلب</a>
+      </article>
+
+      <article class="card">
+        <h2>۱۰ دانشگاه برتر برای پزشکی</h2>
+        <p>مقایسه امکانات، بیمارستان‌های آموزشی و مسیر تخصص.</p>
+        <a href="/detail">ادامه مطلب</a>
+      </article>
+
+      <article class="card">
+        <h2>رشته‌های محبوب با بازارکار قوی</h2>
+        <p>هوش مصنوعی، فیزیوتراپی، طراحی، پرستاری و…</p>
+        <a href="/detail">ادامه مطلب</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© تمامی حقوق برای یونیفو محفوظ است.</p>
+    </div>
+  </footer>
+</body>
+</html>
