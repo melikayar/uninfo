@@ -86,15 +86,16 @@ def about():
 def contact():
     return "<h1>تماس با ما</h1>"
 
-# ---- Health & Error handler (برای دیباگ سریع) ----
+# --- DEBUG ONLY (remove after fix) ---
+import os, json, traceback
+from flask import Response
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 @app.route("/healthz")
 def healthz():
     return "ok"
 
-@app.errorhandler(Exception)
-def handle_exception(e):
-    traceback.print_exc()
-    return Response("Internal error", status=500)
 @app.route("/__ls")
 def __ls():
     return {
@@ -106,5 +107,25 @@ def __ls():
 
 @app.route("/__tpl/<path:name>")
 def __tpl(name):
-    # مثلا /__tpl/index.farsi.html را باز کن تا مطمئن شو Jinja می‌تونه لود کند
+    # مثل: /__tpl/index.farsi.html
     return render_template(name)
+
+@app.route("/__jsoncheck")
+def __jsoncheck():
+    info = {}
+    try:
+        from pathlib import Path
+        p1 = Path(BASE_DIR) / "data" / "departments_farsi.json"
+        p2 = Path(BASE_DIR) / "data" / "departments.json"
+        import json
+        a = json.loads(p1.read_text(encoding="utf-8"))
+        b = json.loads(p2.read_text(encoding="utf-8"))
+        info["fa_count"] = len(a)
+        info["tr_count"] = len(b)
+        info["fa_first"] = a[0].get("name","") if a else ""
+        info["tr_first"] = b[0].get("name","") if b else ""
+        info["ok"] = True
+    except Exception as e:
+        traceback.print_exc()
+        return Response(f"json error: {e}", status=500)
+    return info
