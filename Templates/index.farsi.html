@@ -1,125 +1,199 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>یونیفو | رشته‌های دانشگاهی</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <style>
-        .lang-toggle {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-        }
-        .lang-toggle img {
-            width: 30px;
-            height: auto;
-            cursor: pointer;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>یونیفو | رشته‌های دانشگاهی</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* فقط موارد کوچک که لازم بود اینجاست؛ بقیه در style.css */
+    body { font-family: "Vazirmatn", sans-serif; }
+
+    .lang-toggle {
+      position: absolute; top: 15px; left: 15px; display: flex; gap: 10px;
+    }
+    .lang-toggle img { width: 30px; height: auto; cursor: pointer; }
+
+    /* گرید دانشگاه‌های خصوصی (لوگوها) */
+    .private-universities{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      justify-items: center;
+      align-items: center;
+      margin: 40px auto;
+      max-width: 1200px;
+      padding: 0 16px;
+    }
+    .private-universities .uni-item{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .private-universities .uni-item img{
+      width: 160px; height: auto; display: block;
+      filter: drop-shadow(0 8px 16px rgba(0,0,0,.08));
+    }
+    /* اگر در HTML هنوز <p> نام‌ها مانده، مخفی‌شان کن */
+    .private-universities .uni-item p{ display:none; }
+
+    /* بخش جستجو */
+    .search-container{
+      max-width: 800px; margin: 24px auto 32px; padding: 0 16px; display:flex; justify-content:center;
+    }
+    .search-container form{ width:100%; display:flex; gap:8px; }
+    .search-container input{
+      flex:1; padding:12px 14px; border:1px solid #dcdcdc; border-radius:10px; outline:none;
+    }
+    .search-container button{
+      padding:12px 16px; border:none; border-radius:10px; background:#1e88e5; color:#fff; cursor:pointer;
+    }
+
+    /* شبکه‌ی رشته‌ها */
+    .department-grid{
+      display:grid; gap:16px;
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 1000px; margin: 0 auto 40px; padding: 0 16px;
+    }
+    @media (min-width: 768px){ .department-grid{ grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 1024px){ .department-grid{ grid-template-columns: repeat(4, 1fr); } }
+
+    .department-card{
+      background:#fff; border:1px solid #eee; border-radius:14px; padding:16px;
+      display:flex; flex-direction:column; gap:8px;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .department-card:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,.06);
+    }
+    .department-card a{ color:#0d47a1; text-decoration:none; font-weight:600; }
+    .year-text{ color:#666; font-size:.9rem; margin:0; }
+
+    /* عنوان بخش رشته‌ها */
+    .majors{ margin: 48px auto 12px; text-align:center; }
+    .majors-title{ display:flex; align-items:center; justify-content:center; gap:12px; }
+    .majors-title .logo-prestige{ width:40px; height:auto; }
+    .majors-title__text{ margin:0; font-size:1.4rem; font-weight:700; }
+    .majors-sub{ margin:8px 0 0; color:#555; }
+
+    header{
+      position:relative; padding:48px 16px 64px; text-align:center;
+      background: linear-gradient(180deg, #f3f7ff 0%, #ffffff 100%);
+      border-bottom: 1px solid #eef2ff;
+    }
+    .header-overlay .logo{ margin:0; font-weight:800; letter-spacing:1px; }
+    .type-menu{ margin-top:16px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap; }
+    .type-box{
+      background:#f1f5ff; color:#0d47a1; border:1px solid #dfe8ff;
+      padding:8px 12px; border-radius:999px; font-size:.9rem;
+    }
+
+    /* واکنش‌گرا برای لوگوها */
+    @media (max-width:1024px){ .private-universities{ grid-template-columns: repeat(3,1fr); } }
+    @media (max-width:768px){ .private-universities{ grid-template-columns: repeat(2,1fr); } }
+    @media (max-width:480px){ .private-universities{ grid-template-columns: 1fr; } }
+  </style>
 </head>
+
 <body>
-    <div class="lang-toggle">
-    <!-- Farsça sayfadayız, Türkçeye dönmek için -->
-    <a href="/">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Turkey.svg" alt="Türkçe" title="Türkçe" style="margin-left: 10px;">
+
+  <!-- زبان‌ها -->
+  <div class="lang-toggle" aria-label="تغییر زبان">
+    <a href="/" title="Türkçe">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Turkey.svg" alt="Türkçe">
+    </a>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg" alt="فارسی" title="فارسی">
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-overlay">
+      <h1 class="logo">UNINFOO</h1>
+      <p>بورسیه تحصیلی با Prestige!</p>
+
+      <div class="type-menu">
+        <div class="type-box">لیسانس</div>
+        <div class="type-box">فوق‌دیپلم</div>
+        <div class="type-box">کارشناسی ارشد</div>
+        <div class="type-box">دکترا</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Majors title -->
+  <section class="majors">
+    <div class="majors-title">
+      <img src="{{ url_for('static', filename='Prestige.logo.png') }}" alt="لوگوی Prestige" class="logo-prestige">
+      <h2 class="majors-title__text">رشته‌های دانشگاه‌ها در ترکیه</h2>
+    </div>
+    <p class="majors-sub">کدام رشته برای تو مناسب‌تره؟ انتخاب کن و سرنوشتت رو تغییر بده</p>
+  </section>
+
+  <!-- Search -->
+  <div class="search-container">
+    <form method="GET" action="">
+      <input type="text" name="q" placeholder="نام رشته را جستجو کنید..." value="{{ request.args.get('q', '') }}">
+      <button type="submit">جستجو</button>
+    </form>
+  </div>
+
+  <!-- Departments grid -->
+  <div class="department-grid">
+    {% for d in departments %}
+      <div class="department-card">
+        <a href="/fa/bolum/{{ d.id }}">{{ d.name }}</a>
+        <p class="year-text">{{ d.duration }}</p>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Private universities logos (4تایی افقی، بدون لیبل) -->
+  <div class="private-universities" aria-label="دانشگاه‌های خصوصی">
+    <a class="uni-item" href="/fa/universite/biruni" title="Biruni Üniversitesi">
+      <img loading="lazy" src="{{ url_for('static', filename='uni-logos/biruni.png') }}" alt="Biruni Üniversitesi">
     </a>
 
-    <!-- Farsça simgesi (aktif olduğumuz dil) -->
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg" alt="فارسی" title="فارسی">
-</div>
+    <a class="uni-item" href="/fa/universite/istinye" title="İstinye Üniversitesi">
+      <img loading="lazy" src="{{ url_for('static', filename='uni-logos/istinye.png') }}" alt="İstinye Üniversitesi">
+    </a>
 
- <header>
-  <div class="header-overlay">
-    <h1 class="logo">UNINFOO</h1>
-    <p>بورسیه تحصیلی با Prestige!</p>
+    <a class="uni-item" href="/fa/universite/kent" title="Kent Üniversitesi">
+      <img loading="lazy" src="{{ url_for('static', filename='uni-logos/kent.png') }}" alt="Kent Üniversitesi">
+    </a>
 
-            <div class="type-menu">
-                <div class="type-box">لیسانس</div>
-                <div class="type-box">فوق‌دیپلم</div>
-                <div class="type-box">کارشناسی ارشد</div>
-                <div class="type-box">دکترا</div>
-            </div>
-        </div>
-    </header>
-     <section class="majors">
-  <div class="majors-title">
-    <img src="/static/Prestige.logo.png" alt="Prestige Logo" class="logo-prestige">
-    <h2 class="majors-title__text">رشته های دانشگاه ها در ترکیه</h2>
+    <a class="uni-item" href="/fa/universite/atlas" title="Atlas Üniversitesi">
+      <img loading="lazy" src="{{ url_for('static', filename='uni-logos/atlas.png') }}" alt="Atlas Üniversitesi">
+    </a>
+
+    <a class="uni-item" href="/fa/universite/medipol" title="Medipol Üniversitesi">
+      <img loading="lazy" src="{{ url_for('static', filename='uni-logos/medipol.png') }}" alt="Medipol Üniversitesi">
+    </a>
+
+    <a class="uni-item" href="/fa/universite/aydin" title="Aydın Üniversitesi">
+      <img loading="lazy" src="{{ url_for('static', filename='uni-logos/aydin.png') }}" alt="Aydın Üniversitesi">
+    </a>
   </div>
-  <p class="majors-sub">کدام رشته برای تو مناسب تره ؟ انتخاب کن و سرنوشتت رو تغییر بده</p>
-</section>
-</div>
-    <div class="search-container">
-        <form method="GET">
-            <input type="text" name="q" placeholder="نام رشته را جستجو کنید...">
-            <button type="submit">جستجو</button>
-        </form>
-    </div>
 
-    <div class="department-grid">
-        {% for d in departments %}
-        <div class="department-card">
-            <a href="/fa/bolum/{{ d.id }}">{{ d.name }}</a>
-            <p class="year-text">{{ d.duration }}</p>
-        </div>
-        {% endfor %}
-    </div>
-<!-- Chat Button -->
-<div id="chatButton" style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 30px; z-index: 999;">
+  <!-- Chat Button -->
+  <div id="chatButton" style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 30px; z-index: 999;" aria-label="گفت‌وگوی آنلاین">
     💬
-</div>
+  </div>
 
-<!-- Chat Popup -->
-<div id="chatPopup" style="display: none; position: fixed; bottom: 90px; right: 20px; width: 300px; background-color: white; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2); z-index: 999;">
+  <!-- Chat Popup -->
+  <div id="chatPopup" style="display: none; position: fixed; bottom: 90px; right: 20px; width: 300px; background-color: white; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2); z-index: 999;">
     <div style="padding: 10px; border-bottom: 1px solid #ddd; font-weight: bold;">Online Danışman</div>
     <div style="padding: 10px;">
-        <textarea id="chatMessage" placeholder="Mesajınızı yazın..." style="width: 100%; height: 60px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
-        <button onclick="sendToWhatsApp()" style="margin-top: 10px; width: 100%; background-color: #25D366; color: white; border: none; border-radius: 5px; padding: 8px;">Gönder</button>
+      <textarea id="chatMessage" placeholder="Mesajınızı yazın..." style="width: 100%; height: 60px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+      <button onclick="sendToWhatsApp()" style="margin-top: 10px; width: 100%; background-color: #25D366; color: white; border: none; border-radius: 5px; padding: 8px;">Gönder</button>
     </div>
-</div>
-<script src="{{ url_for('static', filename='chat.js') }}"></script>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
-
-<!-- Özel Üniversiteler Bölümü -->
-<section class="private-universities" style="padding: 40px 20px; background-color: #f9fcff; text-align: center;">
-  <h2 style="font-size: 26px; color: #003366; margin-bottom: 30px;">بهترین دانشگاه‌های خصوصی و بورسیه‌های تحصیلی در ترکیه</h2>
-  
-  <div class="logo-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-    
-    <div class="logo-item" style="text-align: center;">
-      <img src="/static/aydin.png" alt="Aydın Üniversitesi" style="width: 100px; border-radius: 50%; border: 12px solid #3b5998; background: #a9c5e8;">
-      <div style="margin-top: 8px; font-weight: bold;">Aydın Üniversitesi</div>
-    </div>
-    
-    <div class="logo-item" style="text-align: center;">
-      <img src="/static/medipol.png" alt="Medipol Üniversitesi" style="width: 100px; border-radius: 50%; border: 12px solid #3b5998; background: #a9c5e8;">
-      <div style="margin-top: 8px; font-weight: bold;">Medipol Üniversitesi</div>
-    </div>
-
-    <div class="logo-item" style="text-align: center;">
-      <img src="/static/atlas.png" alt="Atlas Üniversitesi" style="width: 100px; border-radius: 50%; border: 12px solid #3b5998; background: #a9c5e8;">
-      <div style="margin-top: 8px; font-weight: bold;">Atlas Üniversitesi</div>
-    </div>
-
-    <div class="logo-item" style="text-align: center;">
-      <img src="/static/kent.png" alt="Kent Üniversitesi" style="width: 100px; border-radius: 50%; border: 12px solid #3b5998; background: #a9c5e8;">
-      <div style="margin-top: 8px; font-weight: bold;">Kent Üniversitesi</div>
-    </div>
-
-    <div class="logo-item" style="text-align: center;">
-      <img src="/static/istiniye.png" alt="İstinye Üniversitesi" style="width: 100px; border-radius: 50%; border: 12px solid #3b5998; background: #a9c5e8;">
-      <div style="margin-top: 8px; font-weight: bold;">İstinye Üniversitesi</div>
-    </div>
-
-    <div class="logo-item" style="text-align: center;">
-      <img src="/static/biruni.png" alt="Biruni Üniversitesi" style="width: 100px; border-radius: 50%; border: 12px solid #3b5998; background: #a9c5e8;">
-      <div style="margin-top: 8px; font-weight: bold;">Biruni Üniversitesi</div>
-    </div>
-
   </div>
-</section>
 
-<script src="{{ url_for('static', filename='chat.js') }}"></script>
+  <!-- Scripts -->
+  <script src="{{ url_for('static', filename='chat.js') }}"></script>
 </body>
 </html>

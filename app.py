@@ -73,3 +73,7 @@ def consult():
 @app.route("/team")
 def team():
     return "<h1>تیم ما</h1>"
+@app.route("/home")
+def home_page():
+    return render_template("home.html")
+    
