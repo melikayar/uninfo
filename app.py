@@ -1,11 +1,15 @@
 from flask import Flask, render_template, request, Response
 import json, os, traceback
 
-app = Flask(__name__)  # فقط یکبار
-
-# ---- Absolute paths for JSON (fix 500) ----
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+app = Flask(
+    __name__,
+    template_folder=os.path.join(BASE_DIR, "templates"),
+    static_folder=os.path.join(BASE_DIR, "static"),
+)
+
+# ---- JSON paths (absolute) ----
 def load_departments():
     path = os.path.join(BASE_DIR, "data", "departments.json")
     with open(path, "r", encoding="utf-8") as f:
@@ -15,6 +19,7 @@ def load_departments_farsi():
     path = os.path.join(BASE_DIR, "data", "departments_farsi.json")
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
+
 
 # ---- Routes ----
 @app.route("/")           # صفحه اصلی = نسخه فارسی
@@ -88,5 +93,18 @@ def healthz():
 
 @app.errorhandler(Exception)
 def handle_exception(e):
-    traceback.print_exc()         # میره تو لاگ Render
+    traceback.print_exc()
     return Response("Internal error", status=500)
+@app.route("/__ls")
+def __ls():
+    return {
+        "cwd": BASE_DIR,
+        "templates": os.listdir(os.path.join(BASE_DIR, "templates")),
+        "data": os.listdir(os.path.join(BASE_DIR, "data")),
+        "static": os.listdir(os.path.join(BASE_DIR, "static")),
+    }
+
+@app.route("/__tpl/<path:name>")
+def __tpl(name):
+    # مثلا /__tpl/index.farsi.html را باز کن تا مطمئن شو Jinja می‌تونه لود کند
+    return render_template(name)
