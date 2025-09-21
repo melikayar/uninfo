@@ -1,35 +1,36 @@
-from flask import Flask, render_template, request, redirect, url_for
-import json
+from flask import Flask, render_template, request, Response
+import json, os, traceback
 
-app = Flask(__name__)  # فقط یکبار تعریف
+app = Flask(__name__)  # فقط یکبار
 
-# ---------- Helper Functions ----------
+# ---- Absolute paths for JSON (fix 500) ----
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 def load_departments():
-    with open("data/departments.json", "r", encoding="utf-8") as f:
+    path = os.path.join(BASE_DIR, "data", "departments.json")
+    with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 def load_departments_farsi():
-    with open("data/departments_farsi.json", "r", encoding="utf-8") as f:
+    path = os.path.join(BASE_DIR, "data", "departments_farsi.json")
+    with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
-# ---------- Routes ----------
-
-# صفحه اصلی → نسخه فارسی
-@app.route("/")
+# ---- Routes ----
+@app.route("/")           # صفحه اصلی = نسخه فارسی
 def root():
     departments = load_departments_farsi()
-    query = (request.args.get("q") or "").strip()
-    if query:
-        departments = [d for d in departments if query in d.get("name", "")]
+    q = (request.args.get("q") or "").strip()
+    if q:
+        departments = [d for d in departments if q in d.get("name", "")]
     return render_template("index.farsi.html", departments=departments)
 
-# نسخه فارسی
 @app.route("/fa")
 def index_farsi():
     departments = load_departments_farsi()
-    query = (request.args.get("q") or "").strip()
-    if query:
-        departments = [d for d in departments if query in d.get("name", "")]
+    q = (request.args.get("q") or "").strip()
+    if q:
+        departments = [d for d in departments if q in d.get("name", "")]
     return render_template("index.farsi.html", departments=departments)
 
 @app.route("/fa/bolum/<int:id>")
@@ -40,13 +41,12 @@ def detail_farsi(id):
         return "رشته یافت نشد", 404
     return render_template("detail.farsi.html", department=department)
 
-# نسخه ترکی/انگلیسی
 @app.route("/tr")
 def index_tr():
     departments = load_departments()
-    query = (request.args.get("q") or "").lower().strip()
-    if query:
-        departments = [d for d in departments if query in d.get("name", "").lower()]
+    q = (request.args.get("q") or "").lower().strip()
+    if q:
+        departments = [d for d in departments if q in d.get("name", "").lower()]
     return render_template("index.html", departments=departments)
 
 @app.route("/bolum/<int:id>")
@@ -57,12 +57,10 @@ def detail(id):
         return "Bölüm bulunamadı", 404
     return render_template("detail.html", department=department)
 
-# صفحه Home جداگانه → /home
-@app.route("/home")
+@app.route("/home")                   # صفحه /home
 def home_page():
     return render_template("home.html")
 
-# صفحات ساده برای منو
 @app.route("/universities")
 def universities():
     return render_template("detail.html")
@@ -82,3 +80,13 @@ def about():
 @app.route("/contact")
 def contact():
     return "<h1>تماس با ما</h1>"
+
+# ---- Health & Error handler (برای دیباگ سریع) ----
+@app.route("/healthz")
+def healthz():
+    return "ok"
+
+@app.errorhandler(Exception)
+def handle_exception(e):
+    traceback.print_exc()         # میره تو لاگ Render
+    return Response("Internal error", status=500)
