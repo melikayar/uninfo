@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for
 import json
 
-app = Flask(__name__)  # از مسیر پیش‌فرض templates/ استفاده می‌کنیم
+app = Flask(__name__)  # فقط یکبار تعریف
 
-# ---------- Helpers ----------
+# ---------- Helper Functions ----------
 def load_departments():
     with open("data/departments.json", "r", encoding="utf-8") as f:
         return json.load(f)
@@ -14,22 +14,24 @@ def load_departments_farsi():
 
 # ---------- Routes ----------
 
-# روت اصلی → به نسخه فارسی هدایت می‌شود
+# صفحه اصلی → نسخه فارسی
 @app.route("/")
 def root():
-    return redirect(url_for("index_farsi"))
+    departments = load_departments_farsi()
+    query = (request.args.get("q") or "").strip()
+    if query:
+        departments = [d for d in departments if query in d.get("name", "")]
+    return render_template("index.farsi.html", departments=departments)
 
-# نسخه فارسی (Home)
+# نسخه فارسی
 @app.route("/fa")
 def index_farsi():
     departments = load_departments_farsi()
     query = (request.args.get("q") or "").strip()
     if query:
-        # برای فارسی lower ضروری نیست؛ شامل بودن ساده کفایت می‌کند
         departments = [d for d in departments if query in d.get("name", "")]
     return render_template("index.farsi.html", departments=departments)
 
-# جزئیات رشته در نسخه فارسی
 @app.route("/fa/bolum/<int:id>")
 def detail_farsi(id):
     departments = load_departments_farsi()
@@ -38,7 +40,7 @@ def detail_farsi(id):
         return "رشته یافت نشد", 404
     return render_template("detail.farsi.html", department=department)
 
-# نسخه ترکی/عمومی (در صورت نیاز)
+# نسخه ترکی/انگلیسی
 @app.route("/tr")
 def index_tr():
     departments = load_departments()
@@ -55,13 +57,12 @@ def detail(id):
         return "Bölüm bulunamadı", 404
     return render_template("detail.html", department=department)
 
-# لینک‌های منوی بالا
-@app.route("/universities")
-def universities():
-    # فعلاً به یک صفحه واقعی رندر بده تا 500 نده
-    return render_template("detail.html")
+# صفحه Home جداگانه → /home
+@app.route("/home")
+def home_page():
+    return render_template("home.html")
 
-
+# صفحات ساده برای منو
 @app.route("/universities")
 def universities():
     return render_template("detail.html")
@@ -73,7 +74,11 @@ def consult():
 @app.route("/team")
 def team():
     return "<h1>تیم ما</h1>"
-@app.route("/home")
-def home_page():
-    return render_template("home.html")
-    
+
+@app.route("/about")
+def about():
+    return "<h1>درباره ما</h1>"
+
+@app.route("/contact")
+def contact():
+    return "<h1>تماس با ما</h1>"
