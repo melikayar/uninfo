@@ -210,3 +210,23 @@ header .logo-prestige,
   }
   .brand img{ height:38px; }
 }
+
+.hero {
+  display: flex;
+  align-items: center;       /* متن و عکس در یک خط وسط‌چین */
+  justify-content: space-between;
+  gap: 20px;                 /* فاصله بین متن و عکس */
+  flex-wrap: wrap;           /* در موبایل بیفته زیر هم */
+  padding: 40px 20px;
+  background: #f9fcff;
+}
+
+.hero-text {
+  flex: 1;                   /* متن نصف صفحه */
+  max-width: 500px;
+}
+
+.hero-media img {
+  max-width: 400px;   /* یا 50% */
+  height: auto;
+}
