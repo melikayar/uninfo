@@ -1,104 +1,115 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>Unifo | Üniversite Bölümleri</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="UTF-8">
+  <title>Uninfoo | Üniversite Bölümleri</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <!-- DİL DEĞİŞTİRME BUTONU -->
-    <div class="lang-toggle">
-        <a href="/fa">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg" alt="Farsça">
+  <!-- DİL DEĞİŞTİRME -->
+  <div class="lang-toggle" style="position:absolute; top:14px; left:14px;">
+    <a href="{{ url_for('index_farsi') }}" title="Farsça">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg" alt="Farsça" style="width:30px;height:auto;">
+    </a>
+  </div>
+
+  <!-- KAPAK VE LOGO -->
+  <header>
+    <div class="header-overlay" style="text-align:center; padding:48px 16px 32px;">
+      <h1 class="logo" style="margin:0;">UNINFOO</h1>
+      <p>Üniversite tercihini bilinçli yap</p>
+      <div class="type-menu" style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+        <div class="type-box">Lisans</div>
+        <div class="type-box">Önlisans</div>
+        <div class="type-box">Yüksek Lisans</div>
+        <div class="type-box">Sertifika</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Başlık -->
+  <div style="text-align:center; margin-top: 24px;">
+    <h1 style="font-size: 32px; color: #003366; margin: 0 0 8px;">Türkiye’deki Üniversite Bölümleri</h1>
+    <p style="font-size: 18px; color: #555; margin: 0 0 16px;">Hangi Bölüm Sana Uygun? Ara, İncele, Karar Ver.</p>
+  </div>
+
+  <!-- ARAMA -->
+  <div class="search-container" style="max-width:800px;margin:16px auto 24px;padding:0 16px;">
+    <form method="GET" action="">
+      <input type="text" name="q" placeholder="Bölüm ara..." value="{{ request.args.get('q','') }}"
+             style="width:100%;padding:12px 14px;border:1px solid #dcdcdc;border-radius:10px;outline:none;">
+      <button type="submit" style="margin-top:8px;padding:10px 16px;border:none;border-radius:10px;background:#1e88e5;color:#fff;cursor:pointer;">
+        Ara
+      </button>
+    </form>
+  </div>
+
+  <!-- BÖLÜM LİSTESİ -->
+  <div class="department-grid" style="display:grid;gap:16px;grid-template-columns:repeat(2,1fr);max-width:1000px;margin:0 auto 40px;padding:0 16px;">
+    {% for d in departments | default([], true) %}
+      <div class="department-card" style="background:#fff;border:1px solid #eee;border-radius:14px;padding:16px;">
+        <a href="{{ url_for('detail', id=d.id) }}" style="color:#0d47a1;text-decoration:none;font-weight:600;">
+          {{ d.name | default('İsimsiz') }}
         </a>
-    </div>
-    <!-- KAPAK VE LOGO ALANI -->
-    <header>
-        <div class="header-overlay">
-            <h1 class="logo">UNINFO</h1>
-            <p>Üniversite tercihini bilinçli yap</p>
-
-            <div class="type-menu">
-                <div class="type-box">Lisans</div>
-                <div class="type-box">Önlisans</div>
-                <div class="type-box">Yüksek Lisans</div>
-                <div class="type-box">Sertifika</div>
-            </div>
-        </div>
-    </header>
-
-<div style="text-align: center; margin-top: 40px;">
-  <h1 style="font-size: 32px; color: #003366;">Türkiye’deki Üniversite Bölümleri</h1>
-  <p style="font-size: 18px; color: #555;">Hangi Bölüm Sana Uygun? Ara, İncele, Karar Ver.</p>
-</div>
-    <!-- ARAMA KUTUSU -->
-    <div class="search-container">
-        <form method="GET">
-            <input type="text" name="q" placeholder="Bölüm ara...">
-            <button type="submit">Ara</button>
-        </form>
-    </div>
-    
-<div class="department-grid">
-    {% for d in departments %}
-    <div class="department-card">
-        <a href="/bolum/{{ d.id }}">{{ d.name }}</a>
-        <p class="year-text">{{ d.duration }}</p>
-    </div>
+        <p class="year-text" style="color:#666;margin:6px 0 0;">{{ d.duration | default('') }}</p>
+      </div>
     {% endfor %}
-</div>
-<!-- Chat Button -->
-<div id="chatButton" style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 30px; z-index: 999;">
-    💬
-</div>
+  </div>
 
-<!-- Chat Popup -->
-<div id="chatPopup" style="display: none; position: fixed; bottom: 90px; right: 20px; width: 300px; background-color: white; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2); z-index: 999;">
+  <!-- Chat Button -->
+  <div id="chatButton" style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 30px; z-index: 999;">
+    💬
+  </div>
+
+  <!-- Chat Popup -->
+  <div id="chatPopup" style="display: none; position: fixed; bottom: 90px; right: 20px; width: 300px; background-color: white; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2); z-index: 999;">
     <div style="padding: 10px; border-bottom: 1px solid #ddd; font-weight: bold;">Online Danışman</div>
     <div style="padding: 10px;">
-        <textarea id="chatMessage" placeholder="Mesajınızı yazın..." style="width: 100%; height: 60px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
-        <button onclick="sendToWhatsApp()" style="margin-top: 10px; width: 100%; background-color: #25D366; color: white; border: none; border-radius: 5px; padding: 8px;">Gönder</button>
+      <textarea id="chatMessage" placeholder="Mesajınızı yazın..." style="width: 100%; height: 60px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+      <button onclick="sendToWhatsApp()" style="margin-top: 10px; width: 100%; background-color: #25D366; color: white; border: none; border-radius: 5px; padding: 8px;">Gönder</button>
     </div>
-</div>
-<script src="{{ url_for('static', filename='chat.js') }}"></script>
-
-<!-- Özel Üniversiteler Bölümü -->
-<section class="private-universities" style="padding: 40px 20px; background-color: #f9fcff; text-align: center;">
-  <h2 style="font-size: 26px; color: #003366; margin-bottom: 30px;">Türkiye’de En İyi Özel Üniversiteler ve Bursları</h2>
-  
-  <div class="logo-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-    
-    <div class="logo-item" style="text-align: center;">
-      <img src="/static/aydin.png" alt="Aydın Üniversitesi" style="width: 100px; border-radius: 50%; border: 12px solid #3b5998; background: #a9c5e8;">
-      <div style="margin-top: 8px; font-weight: bold;">Aydın Üniversitesi</div>
-    </div>
-    
-    <div class="logo-item" style="text-align: center;">
-      <img src="/static/medipol.png" alt="Medipol Üniversitesi" style="width: 100px; border-radius: 50%; border: 12px solid #3b5998; background: #a9c5e8;">
-      <div style="margin-top: 8px; font-weight: bold;">Medipol Üniversitesi</div>
-    </div>
-
-    <div class="logo-item" style="text-align: center;">
-      <img src="/static/atlas.png" alt="Atlas Üniversitesi" style="width: 100px; border-radius: 50%; border: 12px solid #3b5998; background: #a9c5e8;">
-      <div style="margin-top: 8px; font-weight: bold;">Atlas Üniversitesi</div>
-    </div>
-
-    <div class="logo-item" style="text-align: center;">
-      <img src="/static/kent.png" alt="Kent Üniversitesi" style="width: 100px; border-radius: 50%; border: 12px solid #3b5998; background: #a9c5e8;">
-      <div style="margin-top: 8px; font-weight: bold;">Kent Üniversitesi</div>
-    </div>
-
-    <div class="logo-item" style="text-align: center;">
-      <img src="/static/istiniye.png" alt="İstinye Üniversitesi" style="width: 100px; border-radius: 50%; border: 12px solid #3b5998; background: #a9c5e8;">
-      <div style="margin-top: 8px; font-weight: bold;">İstinye Üniversitesi</div>
-    </div>
-
-    <div class="logo-item" style="text-align: center;">
-      <img src="/static/biruni.png" alt="Biruni Üniversitesi" style="width: 100px; border-radius: 50%; border: 12px solid #3b5998; background: #a9c5e8;">
-      <div style="margin-top: 8px; font-weight: bold;">Biruni Üniversitesi</div>
-    </div> 
   </div>
-</section>
-<script src="{{ url_for('static', filename='chat.js') }}"></script>
+
+  <!-- Özel Üniversiteler -->
+  <section class="private-universities" style="padding: 40px 20px; background-color: #f9fcff; text-align: center;">
+    <h2 style="font-size: 26px; color: #003366; margin-bottom: 30px;">Türkiye’de En İyi Özel Üniversiteler ve Bursları</h2>
+    <div class="logo-grid" style="display:flex;flex-wrap:wrap;justify-content:center;gap:30px;">
+      <div class="logo-item" style="text-align:center;">
+        <img loading="lazy" src="{{ url_for('static', filename='uni-logos/aydin.png') }}" alt="Aydın Üniversitesi"
+             style="width:100px;border-radius:50%;border:12px solid #3b5998;background:#a9c5e8;">
+        <div style="margin-top:8px;font-weight:bold;">Aydın Üniversitesi</div>
+      </div>
+      <div class="logo-item" style="text-align:center;">
+        <img loading="lazy" src="{{ url_for('static', filename='uni-logos/medipol.png') }}" alt="Medipol Üniversitesi"
+             style="width:100px;border-radius:50%;border:12px solid #3b5998;background:#a9c5e8;">
+        <div style="margin-top:8px;font-weight:bold;">Medipol Üniversitesi</div>
+      </div>
+      <div class="logo-item" style="text-align:center;">
+        <img loading="lazy" src="{{ url_for('static', filename='uni-logos/atlas.png') }}" alt="Atlas Üniversitesi"
+             style="width:100px;border-radius:50%;border:12px solid #3b5998;background:#a9c5e8;">
+        <div style="margin-top:8px;font-weight:bold;">Atlas Üniversitesi</div>
+      </div>
+      <div class="logo-item" style="text-align:center;">
+        <img loading="lazy" src="{{ url_for('static', filename='uni-logos/kent.png') }}" alt="Kent Üniversitesi"
+             style="width:100px;border-radius:50%;border:12px solid #3b5998;background:#a9c5e8;">
+        <div style="margin-top:8px;font-weight:bold;">Kent Üniversitesi</div>
+      </div>
+      <div class="logo-item" style="text-align:center;">
+        <img loading="lazy" src="{{ url_for('static', filename='uni-logos/istinye.png') }}" alt="İstinye Üniversitesi"
+             style="width:100px;border-radius:50%;border:12px solid #3b5998;background:#a9c5e8;">
+        <div style="margin-top:8px;font-weight:bold;">İstinye Üniversitesi</div>
+      </div>
+      <div class="logo-item" style="text-align:center;">
+        <img loading="lazy" src="{{ url_for('static', filename='uni-logos/biruni.png') }}" alt="Biruni Üniversitesi"
+             style="width:100px;border-radius:50%;border:12px solid #3b5998;background:#a9c5e8;">
+        <div style="margin-top:8px;font-weight:bold;">Biruni Üniversitesi</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="{{ url_for('static', filename='chat.js') }}"></script>
 </body>
 </html>
+  

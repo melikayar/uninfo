@@ -11,31 +11,31 @@
   <!-- نوار بالا -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="/">
-      <img src="{{ url_for('static', filename='Prestige.logo.png') }}" alt="Prestige">
-    </a>
+      <a class="brand" href="{{ url_for('root') }}">
+        <img src="{{ url_for('static', filename='Prestige.logo.png') }}" alt="Prestige">
+      </a>
       <nav class="top-nav">
-        <a href="/">خانه</a>
-        <a href="/detail">رشته‌ها</a>
-        <a href="/universities">دانشگاه‌ها</a>
+        <a href="{{ url_for('home_page') }}">خانه</a>
+        <a href="{{ url_for('index_farsi') }}">رشته‌ها</a>
+        <a href="{{ url_for('universities') }}">دانشگاه‌ها</a>
         <a href="/consult">مشاوره با ما</a>
         <a href="/team">تیم ما</a>
         <a href="/about">درباره ما</a>
         <a href="/contact">تماس</a>
         <!-- سوییچر زبان -->
-        <a class="lang" href="/fa">فارسی</a>
-        <a class="lang" href="/tr">Türkçe</a>
+        <a class="lang" href="{{ url_for('index_farsi') }}">فارسی</a>
+        <a class="lang" href="{{ url_for('index_tr') }}">Türkçe</a>
       </nav>
     </div>
   </header>
 
-  <!-- قهرمان/هِرو شبیه صفحه‌ای که فرستادی -->
+  <!-- Hero -->
   <section class="hero">
     <div class="container">
       <div class="hero-text">
         <h1>بهترین دانشگاه‌های ترکیه برای بورسیه</h1>
         <p>راهنمای پذیرش، شهریه‌ها، شرایط بورسیه و نکات مهم برای متقاضیان.</p>
-        <a class="btn-primary" href="/detail">مشاهده دانشگاه‌ها</a>
+        <a class="btn-primary" href="{{ url_for('index_farsi') }}">مشاهده دانشگاه‌ها</a>
       </div>
       <div class="hero-media">
         <img src="{{ url_for('static', filename='uninfocover.jpg') }}" alt="دانشگاه‌های ترکیه">
@@ -43,7 +43,7 @@
     </div>
   </section>
 
-  <!-- بخش دسته‌بندی‌ها (sidebar + content) -->
+  <!-- بخش دسته‌بندی‌ها -->
   <main class="container grid">
     <aside class="sidebar">
       <div class="search-box">
@@ -63,19 +63,19 @@
       <article class="card">
         <h2>راهنمای کامل بورسیه‌های ترکیه</h2>
         <p>شرایط بورسیه دانشگاه‌های خصوصی و دولتی، مدارک لازم و زمان‌بندی.</p>
-        <a href="/detail">ادامه مطلب</a>
+        <a href="{{ url_for('index_farsi') }}">ادامه مطلب</a>
       </article>
 
       <article class="card">
         <h2>۱۰ دانشگاه برتر برای پزشکی</h2>
         <p>مقایسه امکانات، بیمارستان‌های آموزشی و مسیر تخصص.</p>
-        <a href="/detail">ادامه مطلب</a>
+        <a href="{{ url_for('index_farsi') }}">ادامه مطلب</a>
       </article>
 
       <article class="card">
         <h2>رشته‌های محبوب با بازارکار قوی</h2>
         <p>هوش مصنوعی، فیزیوتراپی، طراحی، پرستاری و…</p>
-        <a href="/detail">ادامه مطلب</a>
+        <a href="{{ url_for('index_farsi') }}">ادامه مطلب</a>
       </article>
     </section>
   </main>
