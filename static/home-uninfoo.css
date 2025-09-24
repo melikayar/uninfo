@@ -117,18 +117,61 @@ img{ max-width:100%; height:auto; display:block }
 /* Utilities */
 .text-center{ text-align:center } .hidden{ display:none !important }
 .mt-1{ margin-top:.25rem } .mt-2{ margin-top:.5rem } .mt-3{ margin-top:1rem } .mt-4{ margin-top:1.5rem }
+/* === Hero image card like screenshot === */
+.hero-card{
+  position:relative;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 12px 32px rgba(15,23,42,.12);
+}
+.hero-card img{
+  width:100%;
+  aspect-ratio: 16 / 9;   /* ثابت می‌ماند؛ در مرورگرهای قدیمی می‌توانی height بدهی */
+  object-fit:cover;
+  display:block;
+}
+.hero-card .overlay{
+  position:absolute; inset:0;
+  display:flex; align-items:center; /* عمودی وسط */
+  padding:clamp(16px, 3vw, 28px);
+  background:linear-gradient(90deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.15) 55%, rgba(0,0,0,0) 100%);
+}
+.hero-title{
+  color:#fff; margin:0;
+  font-weight:800;
+  font-size:clamp(22px, 3.4vw, 40px);
+  line-height:1.25;
+  text-shadow:0 4px 18px rgba(0,0,0,.35);
+}
 
-/* Responsive */
-@media (max-width:1100px){
-  .container{ padding:0 12px }
+/* === Caption card that overlaps image bottom edge === */
+.hero-caption{
+  margin-top:-20px;          /* overlap با تصویر */
+  padding:18px 20px;
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 12px 28px rgba(15,23,42,.10);
+  max-width:820px;           /* عرض منطقی شبیه اسکرین‌شات */
 }
-@media (max-width:992px){
-  .grid{ grid-template-columns:1fr }
-  .hero-card img{ height:300px }
-  .nav{ display:none } /* منوی موبایل را بعداً اضافه می‌کنیم */
+.hero-caption p{ margin:0 0 12px 0; color:#334155 }
+.cta{ padding:.7rem 1.1rem; border-radius:999px; font-weight:700 }
+
+/* کنارِ سایدبار هم‌تراز از بالا بایستد */
+.content{ grid-area: content; display:grid; gap:20px; align-content:start }
+.sidebar{ grid-area: sidebar; align-self:start }
+.grid{
+  display:grid; gap:20px; align-items:start;
+  grid-template-columns: 1fr 290px;          /* محتوا | سایدبار */
+  grid-template-areas: "content sidebar";
 }
-@media (max-width:640px){
-  .cover{ min-height:360px }
-  .cover .title{ font-size:36px }
-  .hero-card h1{ font-size:1.6rem }
+
+/* ریسپانسیو */
+@media (max-width: 992px){
+  .grid{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "content"
+      "sidebar";
+  }
+  .hero-caption{ margin-top:12px; max-width:100% }
 }
