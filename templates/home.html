@@ -10,11 +10,12 @@
 </head>
 <link rel="stylesheet" href="{{ url_for('static', filename='home-uninfoo.css') }}?v=1">
 <body>
-  
-  <!-- Header -->
-  <header class="site-header">
+ <header class="site-header">
     <div class="container nav-bar">
-      <a class="brand" href="/"><img src="/static/Prestige.logo.png" alt="uninfoo"></a>
+      <a class="brand" href="/">
+        <img src="{{ url_for('static', filename='Prestige.logo.png') }}" alt="uninfoo">
+      </a>
+
       <nav class="nav">
         <a href="/">خانه</a>
         <a href="/majors">رشته‌ها</a>
@@ -24,6 +25,7 @@
         <a href="/about">درباره ما</a>
         <a href="/contact">تماس</a>
       </nav>
+
       <div class="actions">
         <a class="btn ghost" href="/fa">فارسی</a>
         <a class="btn" href="/tr">Türkçe</a>
@@ -39,13 +41,37 @@
         <input type="text" placeholder="دنبال چی می‌گردی ..." />
         <button aria-label="جستجو">🔍</button>
       </div>
+
       <div class="chips">
-        <span class="chip">پرستیژ Prestige </span>
+        <span class="chip">پرستیژ Prestige</span>
         <span class="chip">مقالات › بهترین دانشگاه‌های ترکیه برای بورسیه</span>
-        <span class="chip >نویسنده:تیم آی تی سوشیال ملیکا </span>
+        <span class="chip">نویسنده: تیم آی‌تی سوشیال ملیکا</span>
       </div>
     </section>
+
     <div class="grid">
+      <!-- Main content (بیاد اول تا عکس بالا باشد) -->
+      <section class="content">
+        <!-- HERO -->
+        <article class="hero-card">
+          <img src="{{ url_for('static', filename='hero-scholarship.jpg') }}" alt="بهترین دانشگاه‌های ترکیه برای بورسیه" />
+          <div class="overlay">
+            <img class="logo-badge" src="{{ url_for('static', filename='Prestige.logo.png') }}" alt="PRESTIGE" />
+            <h1 class="hero-title">بهترین دانشگاه‌های ترکیه برای بورسیه</h1>
+          </div>
+        </article>
+
+        <!-- کارت توضیح زیر تصویر (اگه در CSS گذاشتی) -->
+        <div class="hero-caption card">
+          <p>
+            راهنمای کامل پذیرش، شهریه‌ها، شرایط بورسیه و نکات مهم برای متقاضیان.
+            در این صفحه بهترین دانشگاه‌ها را از نظر اعتبار، میزان کمک‌هزینه و
+            شانس پذیرش مرور می‌کنیم.
+          </p>
+          <a class="btn primary cta" href="/universities">مشاهده دانشگاه‌ها</a>
+        </div>
+      </section>
+
       <!-- Sidebar -->
       <aside class="sidebar">
         <div class="card">
@@ -59,49 +85,21 @@
             <li><a href="#">آزمون‌ها</a></li>
           </ul>
         </div>
+
         <div class="card">
           <h3>جدیدترین مقالات</h3>
           <ul class="posts-mini">
             <li><a href="#">دانشگاه Aydın</a></li>
             <li><a href="#">دانشگاه Medipol</a></li>
             <li><a href="#">دانشگاه Atlas</a></li>
-            <li><a href="#">دانشگاه Istiniye</a></li>
+            <li><a href="#">دانشگاه Istinye</a></li>
             <li><a href="#">بورسیه ۲۰۲۵ ترکیه</a></li>
           </ul>
         </div>
       </aside>
-      <!-- Main content -->
-      <section class="content">
-        <!-- HERO -->
-        <article class="hero-card">
-          <img src="/static/hero-scholarship.jpg" alt="بهترین دانشگاه‌های ترکیه برای بورسیه" />
-          <div class="overlay">
-            <img class="logo-badge" src="/static/Prestige.logo.png" alt="PRESTIGE" />
-            <h1>بهترین دانشگاه‌های ترکیه برای بورسیه</h1>
-          </div>
-        </article>
-        <!-- Body -->
-        <div class="card article">
-          <p>
-            راهنمای کامل پذیرش، شهریه‌ها، شرایط بورسیه و نکات مهم برای متقاضیان.
-            در این صفحه بهترین دانشگاه‌ها را از نظر اعتبار، میزان کمک‌هزینه و
-            شانس پذیرش مرور می‌کنیم.
-          </p>
-          <a class="btn primary" href="/universities">مشاهده دانشگاه‌ها</a>
-        </div>
-      </section>
     </div>
   </main>
-  <section class="cover">
-  <div class="overlay">
-    <h1 class="title">uninfoo</h1>
-    <p class="subtitle">بهترین دانشگاه‌های ترکیه برای بورسیه</p>
-    <div class="chips">
-      <span class="chip">راهنمای پذیرش</span>
-      <span class="chip">شرایط بورسیه</span>
-    </div>
-  </div>
-</section>
+
   <footer class="site-footer">
     <div class="container">
       <p>© 2025 uninfoo — همه حقوق محفوظ است.</p>
