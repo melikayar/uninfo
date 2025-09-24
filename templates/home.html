@@ -7,13 +7,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/static/css/home-artan.css">
 </head>
+<link rel="stylesheet" href="{{ url_for('static', filename='home-uninfoo.css') }}?v=1">
 <body>
+  
   <!-- Header -->
   <header class="site-header">
     <div class="container nav-bar">
-      <a class="brand" href="/"><img src="/static/img/logo.svg" alt="uninfoo"></a>
+      <a class="brand" href="/"><img src="/static/Prestige.logo.png" alt="uninfoo"></a>
       <nav class="nav">
         <a href="/">خانه</a>
         <a href="/majors">رشته‌ها</a>
@@ -26,7 +27,7 @@
       <div class="actions">
         <a class="btn ghost" href="/fa">فارسی</a>
         <a class="btn" href="/tr">Türkçe</a>
-        <a class="btn accent" href="tel:+905459905433">+90 545 990 5433</a>
+        <a class="btn accent" href="tel:+905366005851">+90 536 600 5851</a>
       </div>
     </div>
   </header>
@@ -39,13 +40,11 @@
         <button aria-label="جستجو">🔍</button>
       </div>
       <div class="chips">
-        <span class="chip">آرتان بورس تاپ</span>
+        <span class="chip">پرستیژ Prestige </span>
         <span class="chip">مقالات › بهترین دانشگاه‌های ترکیه برای بورسیه</span>
-        <span class="chip">بروزرسانی: ۱۸ اسفند ۱۴۰۳</span>
         <span class="chip">نویسنده: تیم بورسیه</span>
       </div>
     </section>
-
     <div class="grid">
       <!-- Sidebar -->
       <aside class="sidebar">
@@ -60,28 +59,27 @@
             <li><a href="#">آزمون‌ها</a></li>
           </ul>
         </div>
-
         <div class="card">
           <h3>جدیدترین مقالات</h3>
           <ul class="posts-mini">
-            <li><a href="#">دانشگاه لاترو</a></li>
-            <li><a href="#">دانشگاه قابیل</a></li>
+            <li><a href="#">دانشگاه Aydın</a></li>
+            <li><a href="#">دانشگاه Medipol</a></li>
+            <li><a href="#">دانشگاه Atlas</a></li>
+            <li><a href="#">دانشگاه Istiniye</a></li>
             <li><a href="#">بورسیه ۲۰۲۵ ترکیه</a></li>
           </ul>
         </div>
       </aside>
-
       <!-- Main content -->
       <section class="content">
         <!-- HERO -->
         <article class="hero-card">
-          <img src="/static/img/hero-scholarship.jpg" alt="بهترین دانشگاه‌های ترکیه برای بورسیه" />
+          <img src="/static/hero-scholarship.jpg" alt="بهترین دانشگاه‌های ترکیه برای بورسیه" />
           <div class="overlay">
-            <img class="logo-badge" src="/static/img/artan-badge.png" alt="Artan" />
+            <img class="logo-badge" src="/static/Prestige.logo.png" alt="PRESTIGE" />
             <h1>بهترین دانشگاه‌های ترکیه برای بورسیه</h1>
           </div>
         </article>
-
         <!-- Body -->
         <div class="card article">
           <p>
@@ -89,13 +87,21 @@
             در این صفحه بهترین دانشگاه‌ها را از نظر اعتبار، میزان کمک‌هزینه و
             شانس پذیرش مرور می‌کنیم.
           </p>
-
           <a class="btn primary" href="/universities">مشاهده دانشگاه‌ها</a>
         </div>
       </section>
     </div>
   </main>
-
+  <section class="cover">
+  <div class="overlay">
+    <h1 class="title">uninfoo</h1>
+    <p class="subtitle">بهترین دانشگاه‌های ترکیه برای بورسیه</p>
+    <div class="chips">
+      <span class="chip">راهنمای پذیرش</span>
+      <span class="chip">شرایط بورسیه</span>
+    </div>
+  </div>
+</section>
   <footer class="site-footer">
     <div class="container">
       <p>© 2025 uninfoo — همه حقوق محفوظ است.</p>

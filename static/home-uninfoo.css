@@ -1,0 +1,134 @@
+/* ===========================
+   uninfoo — Home Page Styles
+   RTL-ready, no duplicates
+=========================== */
+
+/* Variables & Base */
+:root{
+  --bg:#f7f9fb;
+  --card:#ffffff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --primary:#0ea5e9;
+  --accent:#f59e0b;
+  --border:#eef2f7;
+  --radius:16px;
+  --shadow:0 8px 24px rgba(15,23,42,.08);
+}
+
+*{ box-sizing:border-box }
+html{ scroll-behavior:smooth }
+html[dir="rtl"] body{ direction:rtl; font-family:"Vazirmatn","Segoe UI",sans-serif }
+body{ margin:0; background:var(--bg); color:var(--text); line-height:1.75 }
+a{ color:inherit; text-decoration:none }
+img{ max-width:100%; height:auto; display:block }
+.container{ max-width:1200px; margin-inline:auto; padding:0 16px }
+
+/* Header (Top Nav) */
+.site-header{
+  background:#fff; border-bottom:1px solid var(--border);
+  position:sticky; top:0; z-index:50;
+}
+.nav-bar{ min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:16px }
+.brand img{ height:28px; width:auto }
+.nav{ display:flex; gap:20px }
+.nav a{ color:#111827; font-weight:500 }
+.nav a:hover{ color:var(--primary) }
+.actions{ display:flex; gap:8px; align-items:center }
+.btn{
+  background:#e5f3fb; border:1px solid #cbe7f7; color:#075985;
+  font-weight:600; padding:.5rem .9rem; border-radius:999px;
+}
+.btn.ghost{ background:#fff; border-color:#e5e7eb; color:#374151 }
+.btn.accent{ background:var(--accent); border-color:var(--accent); color:#111 }
+.btn.primary{ background:var(--primary); border-color:var(--primary); color:#fff }
+
+/* Optional: Full-width Cover (separate section .cover, NOT header tag) */
+.cover{
+  position:relative; min-height:420px;
+  background-image:url("/static/img/uninfocover.jpg"); /* مسیرت را چک کن */
+  background-size:cover; background-position:center;
+}
+.cover .overlay{
+  position:absolute; inset:0;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:18px; text-align:center; padding:0 16px;
+  color:#fff; background:rgba(0,51,102,.65);
+}
+.cover .title{ font-size:60px; margin:0; line-height:1.1 }
+.cover .subtitle{ font-size:20px; margin:0; color:#eaf4ff }
+.cover .chips{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center }
+.cover .chip{
+  background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.35);
+  color:#fff; padding:.45rem .8rem; border-radius:999px; font-weight:600; backdrop-filter:blur(4px);
+}
+
+/* Filters (Search + Chips row) */
+.page{ padding:24px 0 56px }
+.filters{ display:grid; grid-template-columns:1fr; gap:12px; margin-bottom:16px }
+.search{
+  display:flex; align-items:center; gap:8px;
+  background:#fff; border:1px solid var(--border); border-radius:999px; overflow:hidden;
+}
+.search input{ flex:1; border:0; padding:.85rem 1rem; font-size:15px; background:transparent; outline:none }
+.search button{ border:0; background:#fff; padding:0 14px; cursor:pointer }
+.chips{ display:flex; flex-wrap:wrap; gap:8px }
+.chip{
+  background:#fff; border:1px solid var(--border); color:#374151;
+  padding:.45rem .75rem; border-radius:999px; font-size:.9rem;
+}
+
+/* Layout */
+.grid{ display:grid; grid-template-columns:290px 1fr; gap:20px }
+.card{ background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:16px }
+
+.sidebar h3{ margin:0 0 12px 0; font-size:1.05rem }
+.list-clean{ list-style:none; margin:0; padding:0 }
+.list-clean li{ padding:.45rem 0; border-bottom:1px dashed var(--border) }
+.list-clean li:last-child{ border-bottom:0 }
+.list-clean a{ color:#374151 }
+.list-clean a:hover{ color:var(--primary) }
+
+/* Hero Card (image with overlay title) */
+.hero-card{ position:relative; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); isolation:isolate }
+.hero-card img{ width:100%; height:360px; object-fit:cover }
+.hero-card .overlay{
+  position:absolute; inset:0; padding:24px;
+  display:flex; flex-direction:column; justify-content:center; gap:12px;
+  background:linear-gradient(90deg,rgba(0,0,0,.55) 0%, rgba(0,0,0,.15) 55%, rgba(0,0,0,0) 100%);
+}
+.hero-card .logo-badge{ height:36px; width:auto; filter:drop-shadow(0 6px 10px rgba(0,0,0,.25)) }
+.hero-card h1{ color:#fff; margin:0; font-size:2.2rem; line-height:1.3 }
+
+/* Article */
+.article p{ margin:0 0 14px 0; color:#374151 }
+.article .btn{ display:inline-block; margin-top:8px }
+
+/* Private Universities (logos grid) */
+.private-universities{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:20px; justify-items:center; align-items:center;
+}
+.private-universities img{ width:150px }
+
+/* Footer */
+.site-footer{ border-top:1px solid var(--border); background:#fff }
+.site-footer .container{ padding:20px 16px; color:var(--muted); font-size:.92rem }
+
+/* Utilities */
+.text-center{ text-align:center } .hidden{ display:none !important }
+.mt-1{ margin-top:.25rem } .mt-2{ margin-top:.5rem } .mt-3{ margin-top:1rem } .mt-4{ margin-top:1.5rem }
+
+/* Responsive */
+@media (max-width:1100px){
+  .container{ padding:0 12px }
+}
+@media (max-width:992px){
+  .grid{ grid-template-columns:1fr }
+  .hero-card img{ height:300px }
+  .nav{ display:none } /* منوی موبایل را بعداً اضافه می‌کنیم */
+}
+@media (max-width:640px){
+  .cover{ min-height:360px }
+  .cover .title{ font-size:36px }
+  .hero-card h1{ font-size:1.6rem }
+}
