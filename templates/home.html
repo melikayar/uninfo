@@ -1,88 +1,104 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <title>یونیفو | صفحه اصلی</title>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <title>بهترین دانشگاه‌های ترکیه برای بورسیه | uninfoo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/home-artan.css">
 </head>
 <body>
-  <!-- نوار بالا -->
+  <!-- Header -->
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="{{ url_for('root') }}">
-        <img src="{{ url_for('static', filename='Prestige.logo.png') }}" alt="Prestige">
-      </a>
-      <nav class="top-nav">
-        <a href="{{ url_for('home_page') }}">خانه</a>
-        <a href="{{ url_for('index_farsi') }}">رشته‌ها</a>
-        <a href="{{ url_for('universities') }}">دانشگاه‌ها</a>
+    <div class="container nav-bar">
+      <a class="brand" href="/"><img src="/static/img/logo.svg" alt="uninfoo"></a>
+      <nav class="nav">
+        <a href="/">خانه</a>
+        <a href="/majors">رشته‌ها</a>
+        <a href="/universities">دانشگاه‌ها</a>
         <a href="/consult">مشاوره با ما</a>
         <a href="/team">تیم ما</a>
         <a href="/about">درباره ما</a>
         <a href="/contact">تماس</a>
-        <!-- سوییچر زبان -->
-        <a class="lang" href="{{ url_for('index_farsi') }}">فارسی</a>
-        <a class="lang" href="{{ url_for('index_tr') }}">Türkçe</a>
       </nav>
+      <div class="actions">
+        <a class="btn ghost" href="/fa">فارسی</a>
+        <a class="btn" href="/tr">Türkçe</a>
+        <a class="btn accent" href="tel:+905459905433">+90 545 990 5433</a>
+      </div>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-text">
-        <h1>بهترین دانشگاه‌های ترکیه برای بورسیه</h1>
-        <p>راهنمای پذیرش، شهریه‌ها، شرایط بورسیه و نکات مهم برای متقاضیان.</p>
-        <a class="btn-primary" href="{{ url_for('index_farsi') }}">مشاهده دانشگاه‌ها</a>
+  <main class="container page">
+    <!-- Search + chips row -->
+    <section class="filters">
+      <div class="search">
+        <input type="text" placeholder="دنبال چی می‌گردی ..." />
+        <button aria-label="جستجو">🔍</button>
       </div>
-      <div class="hero-media">
-        <img src="{{ url_for('static', filename='uninfocover.jpg') }}" alt="دانشگاه‌های ترکیه">
+      <div class="chips">
+        <span class="chip">آرتان بورس تاپ</span>
+        <span class="chip">مقالات › بهترین دانشگاه‌های ترکیه برای بورسیه</span>
+        <span class="chip">بروزرسانی: ۱۸ اسفند ۱۴۰۳</span>
+        <span class="chip">نویسنده: تیم بورسیه</span>
       </div>
-    </div>
-  </section>
-
-  <!-- بخش دسته‌بندی‌ها -->
-  <main class="container grid">
-    <aside class="sidebar">
-      <div class="search-box">
-        <input type="text" placeholder="... دنبال چی می‌گردی؟">
-        <button>جستجو</button>
-      </div>
-      <h3>دسته‌ها</h3>
-      <ul class="cats">
-        <li><a href="#">خدمات مشاوره پذیرش</a></li>
-        <li><a href="#">آزمون‌ها و شرایط</a></li>
-        <li><a href="#">معرفی دانشگاه‌های ترکیه</a></li>
-        <li><a href="#">رشته‌های پرطرفدار</a></li>
-      </ul>
-    </aside>
-
-    <section class="content">
-      <article class="card">
-        <h2>راهنمای کامل بورسیه‌های ترکیه</h2>
-        <p>شرایط بورسیه دانشگاه‌های خصوصی و دولتی، مدارک لازم و زمان‌بندی.</p>
-        <a href="{{ url_for('index_farsi') }}">ادامه مطلب</a>
-      </article>
-
-      <article class="card">
-        <h2>۱۰ دانشگاه برتر برای پزشکی</h2>
-        <p>مقایسه امکانات، بیمارستان‌های آموزشی و مسیر تخصص.</p>
-        <a href="{{ url_for('index_farsi') }}">ادامه مطلب</a>
-      </article>
-
-      <article class="card">
-        <h2>رشته‌های محبوب با بازارکار قوی</h2>
-        <p>هوش مصنوعی، فیزیوتراپی، طراحی، پرستاری و…</p>
-        <a href="{{ url_for('index_farsi') }}">ادامه مطلب</a>
-      </article>
     </section>
+
+    <div class="grid">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="card">
+          <h3>دسته‌ها</h3>
+          <ul class="cat">
+            <li><a href="#">خدمات مشاوره</a></li>
+            <li><a href="#">دانستنی‌های زندگی در ترکیه</a></li>
+            <li><a href="#">شرایط کار در ترکیه</a></li>
+            <li><a href="#">معرفی دانشگاه‌های ترکیه</a></li>
+            <li><a href="#">معرفی رشته‌ها</a></li>
+            <li><a href="#">آزمون‌ها</a></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>جدیدترین مقالات</h3>
+          <ul class="posts-mini">
+            <li><a href="#">دانشگاه لاترو</a></li>
+            <li><a href="#">دانشگاه قابیل</a></li>
+            <li><a href="#">بورسیه ۲۰۲۵ ترکیه</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main content -->
+      <section class="content">
+        <!-- HERO -->
+        <article class="hero-card">
+          <img src="/static/img/hero-scholarship.jpg" alt="بهترین دانشگاه‌های ترکیه برای بورسیه" />
+          <div class="overlay">
+            <img class="logo-badge" src="/static/img/artan-badge.png" alt="Artan" />
+            <h1>بهترین دانشگاه‌های ترکیه برای بورسیه</h1>
+          </div>
+        </article>
+
+        <!-- Body -->
+        <div class="card article">
+          <p>
+            راهنمای کامل پذیرش، شهریه‌ها، شرایط بورسیه و نکات مهم برای متقاضیان.
+            در این صفحه بهترین دانشگاه‌ها را از نظر اعتبار، میزان کمک‌هزینه و
+            شانس پذیرش مرور می‌کنیم.
+          </p>
+
+          <a class="btn primary" href="/universities">مشاهده دانشگاه‌ها</a>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© تمامی حقوق برای یونیفو محفوظ است.</p>
+      <p>© 2025 uninfoo — همه حقوق محفوظ است.</p>
     </div>
   </footer>
 </body>
