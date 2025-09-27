@@ -33,8 +33,32 @@ def load_departments_farsi():
     return _load_json(os.path.join("data", "departments_farsi.json"))
 
 # ---- routes ----
+# ---- routes ----
+from flask import redirect, url_for, render_template, request
+from jinja2 import TemplateNotFound
+import traceback
+
+# 1) ریشه سایت → ریدایرکت دائمی به /home (برای سئو هم بهتره)
 @app.route("/")
 def root():
+    return redirect(url_for("home"), code=301)
+
+# 2) صفحه Home
+@app.route("/home")
+def home():
+    try:
+        # اگر نسخهٔ فارسی داری، اول همونو رندر کن
+        try:
+            return render_template("home.farsi.html")
+        except TemplateNotFound:
+            return render_template("home.html")
+    except Exception:
+        app.logger.error("home() failed:\n" + traceback.format_exc())
+        return "Internal error", 500
+
+# 3) صفحه «رشته‌ها» (همون منطقی که قبلاً در / بود)
+@app.route("/reshteha")
+def majors():
     try:
         deps = load_departments_farsi()
         q = (request.args.get("q") or "").strip()
@@ -46,8 +70,9 @@ def root():
         except TemplateNotFound:
             return render_template("index.html", departments=deps)
     except Exception:
-        app.logger.error("root() failed:\n" + traceback.format_exc())
+        app.logger.error("majors() failed:\n" + traceback.format_exc())
         return "Internal error", 500
+
 
 @app.route("/fa")
 def index_farsi():
@@ -90,10 +115,6 @@ def detail(id):
     if not dep:
         return "Bölüm bulunamadı", 404
     return render_template("detail.html", department=dep)
-
-@app.route("/home")
-def home_page():
-    return render_template("home.html")
 
 @app.route("/universities")
 def universities():
