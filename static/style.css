@@ -68,17 +68,17 @@ header {
 }
 
 /* Prestige logo */
-.logo-prestige{
-  height: 90px !important;   /* تغییر بده: 80/90/100px */
+/* Prestige logo */
+header .logo-prestige,
+.navbar-brand .logo-prestige {
+  max-height: none !important;  
+  height: 140px !important;     
   width: auto !important;
   object-fit: contain;
   display: inline-block;
   vertical-align: middle;
 }
-header .logo-prestige,
-.navbar-brand .logo-prestige{
-  max-height: none !important;
-}
+
 
 /* زیرتیتر */
 .majors-sub { text-align: center; color: #333; margin: 6px 0 20px; }
@@ -174,7 +174,7 @@ header .logo-prestige,
 }
 
 .brand img{
-  height:44px; /* در صورت نیاز تغییر بده */
+  height:44px; 
   width:auto;
   display:block;
 }
