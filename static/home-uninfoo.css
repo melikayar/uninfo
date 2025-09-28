@@ -187,3 +187,34 @@ h1, h2, h3 { margin-top: .25rem; }
   }
   .hero-caption{ margin-top:12px; max-width:100% }
 }
+/* === Fix 1: فاصله‌ی پرش به انکر زیر هدر ثابت/چسبان === */
+:root{ --nav-h:72px; } /* ارتفاع واقعی نوار بالایی‌ت را اینجا بگذار */
+[id]{
+  scroll-margin-top: calc(var(--nav-h) + 12px) !important;
+}
+
+/* === Fix 2: کشتن margin-collapse و صفر کردن فاصله‌ی بالای سکشن هدف === */
+/* id یا کلاس سکشنی که تیتر «دانشگاه‌های خصوصی ترکیه…» داخلش است را اینجا بگذار */
+#home-private-unis,
+.section-private{
+  margin-top: 0 !important;
+  padding-top: 12px !important;           /* padding باعث می‌شود margin بالا قاطی والد نشود */
+  border-top: 1px solid transparent;      /* یک BFC ارزان برای جلوگیری از collapse */
+  overflow: auto;                          /* تضمینی‌تر شدن BFC */
+}
+#home-private-unis > *:first-child,
+.section-private > *:first-child{
+  margin-top: 0 !important;
+}
+
+/* === Fix 3: اگر بلافاصله بعد از .cover یا هدر می‌آید، هر فاصله‌ای را صفر کن === */
+.site-header + .page,
+.cover + .page,
+.cover + section,
+.site-header + section{
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* === Fix 4: فاصله بالایی تیترها خیلی کم باشد (override قطعی) === */
+h1, h2, h3{ margin-top: .25rem !important; }
