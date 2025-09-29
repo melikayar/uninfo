@@ -250,5 +250,15 @@ h1, h2, h3{ margin-top: .25rem !important; }
 }
 .uf-submit:disabled{ opacity:.7; cursor:wait; }
 .uf-status{ margin:8px 0 0; font-size:.9rem; }
+form {
+  background-color: #0b7a44 !important;  /* سبز تیره */
+}
+
+/* رنگ دکمه داخل فرم */
+form button {
+  background-color: #085d34 !important;  /* سبز تیره‌تر */
+}
+
 
 @media (max-width:480px){ .uf-panel{ width:min(92vw,360px); } }
+/* رنگ پس‌زمینه فرم سبز */
