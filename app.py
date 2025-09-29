@@ -156,3 +156,81 @@ def __jsoncheck():
     except Exception as e:
         traceback.print_exc()
         return Response(f"json error: {e}", status=500)
+    
+import os, csv, datetime as dt, requests
+from flask import request, jsonify
+# --- WhatsApp notify helper ---
+def notify_whatsapp_admin(text: str) -> bool:
+    token   = os.getenv("WHATSAPP_TOKEN", "")
+    phone_id= os.getenv("WHATSAPP_PHONE_NUMBER_ID", "")
+    admin_to= os.getenv("ADMIN_WHATSAPP", "")
+
+    if not (token and phone_id and admin_to):
+        print("⚠️ WhatsApp ENV missing; skip notify")
+        return False
+
+    url = f"https://graph.facebook.com/v21.0/{phone_id}/messages"
+    headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
+
+    # تلاش اول: متن ساده
+    payload_text = {
+        "messaging_product": "whatsapp",
+        "to": admin_to,
+        "type": "text",
+        "text": {"preview_url": False, "body": text[:4000]}
+    }
+    r = requests.post(url, headers=headers, json=payload_text, timeout=12)
+    if r.status_code == 200:
+        return True
+
+    # تلاش دوم: Template
+    tpl = os.getenv("WHATSAPP_TEMPLATE_NAME")
+    if tpl:
+        payload_tpl = {
+            "messaging_product": "whatsapp",
+            "to": admin_to,
+            "type": "template",
+            "template": {
+                "name": tpl,
+                "language": {"code": os.getenv("WHATSAPP_TEMPLATE_LANG","fa")},
+                "components": [
+                    {"type": "body", "parameters": [{"type": "text", "text": text[:1000]}]}
+                ]
+            }
+        }
+        r2 = requests.post(url, headers=headers, json=payload_tpl, timeout=12)
+        print("WA template:", r2.status_code, r2.text[:200])
+        return r2.status_code == 200
+
+    print("WA text failed:", r.status_code, r.text[:200])
+    return False
+@app.route("/api/lead", methods=["POST"])
+def api_lead():
+    data = request.get_json(force=True) or {}
+    required = ["first_name", "last_name", "phone", "service"]
+    if not all(data.get(k) for k in required):
+        return jsonify(ok=False, error="missing_fields"), 400
+
+    data_dir = os.path.join(app.root_path, "data")
+    os.makedirs(data_dir, exist_ok=True)
+    csv_path = os.path.join(data_dir, "leads.csv")
+
+    row = [
+        dt.datetime.now().isoformat(timespec="seconds"),
+        data.get("first_name","").strip(),
+        data.get("last_name","").strip(),
+        data.get("email","").strip(),
+        data.get("phone","").strip(),
+        data.get("service","").strip(),
+        # منبع صفحه (در قدم ۱ اگر hidden گذاشته‌ای)
+        data.get("source",""),
+    ]
+
+    file_exists = os.path.exists(csv_path)
+    with open(csv_path, "a", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        if not file_exists:
+            w.writerow(["created_at","first_name","last_name","email","phone","service","source"])
+        w.writerow(row)
+
+    return jsonify(ok=True)

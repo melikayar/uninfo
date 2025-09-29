@@ -218,3 +218,39 @@ h1, h2, h3 { margin-top: .25rem; }
 
 /* === Fix 4: فاصله بالایی تیترها خیلی کم باشد (override قطعی) === */
 h1, h2, h3{ margin-top: .25rem !important; }
+/* === Floating Contact (Green theme) === */
+:root{ --wa:#00C853; --wa-dark:#00A844; --wa-ink:#0B2B16; }
+
+.uf-contact{ position:fixed; left:16px; bottom:16px; z-index:1200; color:#fff; font-family:inherit; }
+.uf-toggle{
+  background:var(--wa); color:#fff; border:0; cursor:pointer;
+  padding:.65rem 1rem; border-radius:999px; font-weight:800;
+  box-shadow:0 8px 22px rgba(2, 91, 86, 0.35);
+}
+.uf-toggle:hover{ background:var(--wa-dark); }
+
+.uf-panel{
+  width:340px; max-width:92vw; margin-top:10px; display:block;
+  background:var(--wa); border-radius:16px; overflow:hidden;
+  box-shadow:0 16px 40px rgba(0,0,0,.25);
+}
+.uf-contact.collapsed .uf-panel{ display:none; }
+
+.uf-head{ display:flex; align-items:center; justify-content:space-between; padding:12px 14px; background:rgba(255,255,255,.12); }
+.uf-close{ border:0; background:transparent; color:#fff; font-size:24px; cursor:pointer; line-height:1; }
+
+#uf-form{ padding:14px; }
+.uf-field{ margin-bottom:10px; }
+.uf-field label{ display:block; font-size:.85rem; margin-bottom:4px; opacity:.95; }
+.uf-field input, .uf-field select{
+  width:100%; border-radius:10px; border:1px solid rgba(255,255,255,.35);
+  background:#fff; color:#111; padding:.6rem .75rem; outline:none;
+}
+.uf-submit{
+  width:100%; border:0; cursor:pointer; background:#FFD166; color:#111; font-weight:800;
+  padding:.7rem 1rem; border-radius:12px; box-shadow:0 8px 18px rgba(0,0,0,.15);
+}
+.uf-submit:disabled{ opacity:.7; cursor:wait; }
+.uf-status{ margin:8px 0 0; font-size:.9rem; }
+
+@media (max-width:480px){ .uf-panel{ width:min(92vw,360px); } }

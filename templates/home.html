@@ -116,5 +116,98 @@
       <p>© 2025 uninfoo — همه حقوق محفوظ است.</p>
     </div>
   </footer>
+  <!-- Floating Contact (Step 1: HTML only) -->
+<div dir="rtl"
+     id="uf-contact"
+     style="
+       position:fixed; left:16px; bottom:16px; z-index:1200;
+       width:340px; max-width:92vw;
+       background:#00C853; color:#fff;
+       border-radius:16px; padding:14px;
+       box-shadow:0 16px 40px rgba(0,0,0,.25); font-family:inherit;
+     ">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+    <strong style="font-size:1rem">درخواست مشاوره رایگان</strong>
+  </div>
+
+  <form id="uf-form" action="#" method="post">
+    <div style="margin-bottom:10px">
+      <label style="display:block;font-size:.85rem;margin-bottom:4px">نام</label>
+      <input name="first_name" required placeholder="نام"
+             style="width:100%;border-radius:10px;border:1px solid rgba(255,255,255,.35);
+                    background:#fff;color:#111;padding:.6rem .75rem;outline:none;">
+    </div>
+
+    <div style="margin-bottom:10px">
+      <label style="display:block;font-size:.85rem;margin-bottom:4px">نام خانوادگی</label>
+      <input name="last_name" required placeholder="نام خانوادگی"
+             style="width:100%;border-radius:10px;border:1px solid rgba(255,255,255,.35);
+                    background:#fff;color:#111;padding:.6rem .75rem;outline:none;">
+    </div>
+
+    <div style="margin-bottom:10px">
+      <label style="display:block;font-size:.85rem;margin-bottom:4px">ایمیل</label>
+      <input name="email" type="email" placeholder="example@mail.com"
+             style="width:100%;border-radius:10px;border:1px solid rgba(255,255,255,.35);
+                    background:#fff;color:#111;padding:.6rem .75rem;outline:none;">
+    </div>
+
+    <div style="margin-bottom:10px">
+      <label style="display:block;font-size:.85rem;margin-bottom:4px">شماره همراه</label>
+      <input name="phone" inputmode="tel" required placeholder="09xxxxxxxxx"
+             style="width:100%;border-radius:10px;border:1px solid rgba(255,255,255,.35);
+                    background:#fff;color:#111;padding:.6rem .75rem;outline:none;">
+    </div>
+
+    <div style="margin-bottom:12px">
+      <label style="display:block;font-size:.85rem;margin-bottom:4px">سرویس مورد نظر</label>
+      <select name="service" required
+              style="width:100%;border-radius:10px;border:1px solid rgba(255,255,255,.35);
+                     background:#fff;color:#111;padding:.6rem .75rem;outline:none;">
+        <option value="" selected disabled>انتخاب کنید…</option>
+        <option>پذیرش دانشگاه‌های ترکیه</option>
+        <option>مشاوره انتخاب رشته</option>
+        <option>بورسیه و فاند</option>
+        <option>پیگیری پرونده</option>
+        <option>سایر</option>
+      </select>
+    </div>
+
+    <button type="submit"
+            style="width:100%;border:0;cursor:pointer;background:#FFD166;color:#111;
+                   font-weight:800;padding:.7rem 1rem;border-radius:12px;
+                   box-shadow:0 8px 18px rgba(0,0,0,.15);">
+      ارسال
+    </button>
+  </form>
+</div>
+<script>
+document.getElementById('uf-form')?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const form = e.currentTarget;
+  const payload = Object.fromEntries(new FormData(form).entries());
+  const btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
+
+  try {
+    const res = await fetch('/api/lead', {
+      method: 'POST',
+      headers: { 'Content-Type':'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const json = await res.json();
+    if (json && json.ok) {
+      alert('✅ ثبت شد! همکاران ما با شما تماس می‌گیرند.');
+      form.reset();
+    } else {
+      alert('⚠️ ارسال ناموفق بود. دوباره تلاش کنید.');
+    }
+  } catch (err){
+    alert('❌ خطا در اتصال به سرور.');
+  } finally {
+    btn.disabled = false;
+  }
+});
+</script>
 </body>
 </html>
