@@ -219,7 +219,9 @@ h1, h2, h3 { margin-top: .25rem; }
 /* === Fix 4: فاصله بالایی تیترها خیلی کم باشد (override قطعی) === */
 h1, h2, h3{ margin-top: .25rem !important; }
 /* === Floating Contact (Green theme) === */
-:root{ --wa:#00C853; --wa-dark:#00A844; --wa-ink:#0B2B16; }
+:root{--wa:#06616d;
+  --wa-dark:#00786e;
+  --wa-ink:#081e12 ; }
 
 .uf-contact{ position:fixed; left:16px; bottom:16px; z-index:1200; color:#fff; font-family:inherit; }
 .uf-toggle{
@@ -227,13 +229,9 @@ h1, h2, h3{ margin-top: .25rem !important; }
   padding:.65rem 1rem; border-radius:999px; font-weight:800;
   box-shadow:0 8px 22px rgba(2, 91, 86, 0.35);
 }
-.uf-toggle:hover{ background:var(--wa-dark); }
+.uf-panel, .uf-toggle{ background:#06817d !important; }
+.uf-toggle:hover{ background:#064f44 !important; }
 
-.uf-panel{
-  width:340px; max-width:92vw; margin-top:10px; display:block;
-  background:var(--wa); border-radius:16px; overflow:hidden;
-  box-shadow:0 16px 40px rgba(0,0,0,.25);
-}
 .uf-contact.collapsed .uf-panel{ display:none; }
 
 .uf-head{ display:flex; align-items:center; justify-content:space-between; padding:12px 14px; background:rgba(255,255,255,.12); }
