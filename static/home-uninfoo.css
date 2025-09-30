@@ -250,14 +250,7 @@ h1, h2, h3{ margin-top: .25rem !important; }
 }
 .uf-submit:disabled{ opacity:.7; cursor:wait; }
 .uf-status{ margin:8px 0 0; font-size:.9rem; }
-form {
-  background-color: #0b7a44 !important;  /* سبز تیره */
-}
 
-/* رنگ دکمه داخل فرم */
-form button {
-  background-color: #085d34 !important;  /* سبز تیره‌تر */
-}
 /* --- فقط موبایل: عرض <= 767px --- */
 @media (max-width: 767.98px) {
 
@@ -302,13 +295,11 @@ form button {
   }
 }
 
-/* --- از تبلت به بالا هرچی بود مثل قبل بمونه --- */
 @media (min-width: 768px) {
   .navbar .burger { display: none; }
   .navbar .menu   { display: flex; gap:14px; }
   .layout { display:grid; grid-template-columns: 1fr 340px; gap: 18px; }
 }
-/* اگر کارت‌ها روی دسکتاپ چندستونه بودند: */
 @media (min-width: 992px) {
   .grid { grid-template-columns: repeat(3, 1fr); }
 }
