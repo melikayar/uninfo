@@ -229,8 +229,7 @@ h1, h2, h3{ margin-top: .25rem !important; }
   padding:.65rem 1rem; border-radius:999px; font-weight:800;
   box-shadow:0 8px 22px rgba(2, 91, 86, 0.35);
 }
-.uf-panel, .uf-toggle{ background:#06817d !important; }
-.uf-toggle:hover{ background:#064f44 !important; }
+.uf-toggle{ background:#06817d !important; }
 
 .uf-contact.collapsed .uf-panel{ display:none; }
 
