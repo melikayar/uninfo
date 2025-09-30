@@ -209,5 +209,55 @@ document.getElementById('uf-form')?.addEventListener('submit', async (e) => {
   }
 });
 </script>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="logo" href="/">uninfoo</a>
+    <div class="burger" onclick="document.body.classList.toggle('nav-open')">☰</div>
+    <nav class="menu">
+      <a href="/home">خانه</a>
+      <a href="/reshteha">رشته‌ها</a>
+      <a href="/daneshgha">دانشگاه‌ها</a>
+      <a href="/mashavere">مشاوره</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <img src="{{ url_for('static', filename='hero-scholarship.jpg') }}" alt="">
+    <div class="hero-content">
+      <h1 class="title">بهترین دانشگاه‌های ترکیه برای بورس</h1>
+      <p class="subtitle">راهنمای کامل پذیرش، شهریه‌ها و نکات مهم…</p>
+    </div>
+  </section>
+  <section class="layout">
+    <div>
+      <div class="grid">
+        <!-- کارت‌ها/مقالات -->
+        <article class="card">…</article>
+        <article class="card">…</article>
+        <article class="card">…</article>
+      </div>
+    </div>
+
+    <aside class="uf-panel request-box">
+      <!-- فرم سبز -->
+      <form>
+        <div class="uf-field"><input type="text" placeholder="نام"></div>
+        <div class="uf-field"><input type="text" placeholder="نام خانوادگی"></div>
+        <div class="uf-field"><input type="email" placeholder="ایمیل"></div>
+        <div class="uf-field"><input type="tel" placeholder="شماره همراه"></div>
+        <div class="uf-field">
+          <select>
+            <option>سرویس مورد نظر</option>
+          </select>
+        </div>
+        <button class="btn" type="submit">ارسال</button>
+      </form>
+    </aside>
+  </section>
+
+  <a class="fab btn" href="https://wa.me/905366005851" aria-label="WhatsApp">WA</a>
+</main>
 </body>
 </html>
