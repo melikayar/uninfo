@@ -4,20 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>بهترین دانشگاه‌های ترکیه برای بورسیه | uninfoo</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Single CSS include -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='home-uninfoo.css') }}?v=5">
 </head>
-<link rel="stylesheet" href="{{ url_for('static', filename='home-uninfoo.css') }}?v=1">
-<link rel="stylesheet" href="{{ url_for('static', filename='home-uninfoo.css') }}?v=mobile3">
 <body>
- <header class="site-header">
+
+  <!-- Header -->
+  <header class="site-header">
     <div class="container nav-bar">
       <a class="brand" href="/">
         <img src="{{ url_for('static', filename='Prestige.logo.png') }}" alt="uninfoo">
       </a>
-
-        <nav class="nav">
+      <nav class="nav">
         <a href="/home">خانه</a>
         <a href="/reshteha">رشته‌ها</a>
         <a href="/majors">رشته‌ها</a>
@@ -27,23 +30,21 @@
         <a href="/about">درباره ما</a>
         <a href="/contact">تماس</a>
       </nav>
-
       <div class="actions">
         <a class="btn ghost" href="/fa">فارسی</a>
         <a class="btn" href="/tr">Türkçe</a>
-        <span dir="ltr" style="white-space: nowrap;">+90 536 600 5851</span>
+        <span dir="ltr" style="white-space:nowrap;">+90 536 600 5851</span>
       </div>
     </div>
   </header>
 
   <main class="container page">
-    <!-- Search + chips row -->
+    <!-- Filters -->
     <section class="filters">
       <div class="search">
         <input type="text" placeholder="دنبال چی می‌گردی ..." />
         <button aria-label="جستجو">🔍</button>
       </div>
-
       <div class="chips">
         <span class="chip">پرستیژ Prestige</span>
         <span class="chip">مقالات › بهترین دانشگاه‌های ترکیه برای بورسیه</span>
@@ -51,35 +52,32 @@
       </div>
     </section>
 
-    <div class="grid">
-      <!-- Main content (بیاد اول تا عکس بالا باشد) -->
+    <!-- Layout -->
+    <div class="page-grid">
+      <!-- Content -->
       <section class="content">
-        <!-- HERO -->
+        <!-- Hero -->
         <article class="hero-card">
-          <img src="{{ url_for('static', filename='hero-scholarship.jpg') }}" alt="بهترین دانشگاه‌های ترکیه برای بورسیه" />
+          <img src="{{ url_for('static', filename='hero-scholarship.jpg') }}" alt="بهترین دانشگاه‌های ترکیه برای بورسیه">
           <div class="overlay">
-            <img class="logo-badge" src="{{ url_for('static', filename='Prestige.logo.png') }}" alt="PRESTIGE" />
+            <img class="logo-badge" src="{{ url_for('static', filename='Prestige.logo.png') }}" alt="PRESTIGE">
             <h1 class="hero-title">بهترین دانشگاه‌های ترکیه برای بورسیه</h1>
           </div>
         </article>
 
-        <!-- کارت توضیح زیر تصویر (اگه در CSS گذاشتی) -->
         <div class="hero-caption card">
-          <p>
-            راهنمای کامل پذیرش، شهریه‌ها، شرایط بورسیه و نکات مهم برای متقاضیان.
-            در این صفحه بهترین دانشگاه‌ها را از نظر اعتبار، میزان کمک‌هزینه و
-            شانس پذیرش مرور می‌کنیم.
-          </p>
+          <p>راهنمای کامل پذیرش، شهریه‌ها، شرایط بورسیه و نکات مهم برای متقاضیان. در این صفحه بهترین دانشگاه‌ها را از نظر اعتبار، کمک‌هزینه و شانس پذیرش مرور می‌کنیم.</p>
           <a class="btn primary cta" href="/universities">مشاهده دانشگاه‌ها</a>
         </div>
+
+        {% include "partials/private_universities.html" %}
       </section>
-       {% include "partials/private_universities.html" %}
 
       <!-- Sidebar -->
       <aside class="sidebar">
         <div class="card">
           <h3>دسته‌ها</h3>
-          <ul class="cat">
+          <ul class="list-clean">
             <li><a href="#">خدمات مشاوره</a></li>
             <li><a href="#">دانستنی‌های زندگی در ترکیه</a></li>
             <li><a href="#">شرایط کار در ترکیه</a></li>
@@ -91,7 +89,7 @@
 
         <div class="card">
           <h3>جدیدترین مقالات</h3>
-          <ul class="posts-mini">
+          <ul class="list-clean">
             <li><a href="#">دانشگاه Aydın</a></li>
             <li><a href="#">دانشگاه Medipol</a></li>
             <li><a href="#">دانشگاه Atlas</a></li>
@@ -117,148 +115,107 @@
       <p>© 2025 uninfoo — همه حقوق محفوظ است.</p>
     </div>
   </footer>
-  <!-- Floating Contact (Step 1: HTML only) -->
-<div dir="rtl"
-     id="uf-contact"
-     style="
-       position:fixed; left:16px; bottom:16px; z-index:1200;
-       width:340px; max-width:92vw;
-       background:#00C853; color:#fff;
-       border-radius:16px; padding:14px;
-       box-shadow:0 16px 40px rgba(0,0,0,.25); font-family:inherit;
-     ">
-  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
-    <strong style="font-size:1rem">درخواست مشاوره رایگان</strong>
-  </div>
 
-  <form id="uf-form" action="#" method="post">
-    <div style="margin-bottom:10px">
-      <label style="display:block;font-size:.85rem;margin-bottom:4px">نام</label>
-      <input name="first_name" required placeholder="نام"
-             style="width:100%;border-radius:10px;border:1px solid rgba(255,255,255,.35);
-                    background:#fff;color:#111;padding:.6rem .75rem;outline:none;">
-    </div>
-
-    <div style="margin-bottom:10px">
-      <label style="display:block;font-size:.85rem;margin-bottom:4px">نام خانوادگی</label>
-      <input name="last_name" required placeholder="نام خانوادگی"
-             style="width:100%;border-radius:10px;border:1px solid rgba(255,255,255,.35);
-                    background:#fff;color:#111;padding:.6rem .75rem;outline:none;">
-    </div>
-
-    <div style="margin-bottom:10px">
-      <label style="display:block;font-size:.85rem;margin-bottom:4px">ایمیل</label>
-      <input name="email" type="email" placeholder="example@mail.com"
-             style="width:100%;border-radius:10px;border:1px solid rgba(255,255,255,.35);
-                    background:#fff;color:#111;padding:.6rem .75rem;outline:none;">
-    </div>
-
-    <div style="margin-bottom:10px">
-      <label style="display:block;font-size:.85rem;margin-bottom:4px">شماره همراه</label>
-      <input name="phone" inputmode="tel" required placeholder="09xxxxxxxxx"
-             style="width:100%;border-radius:10px;border:1px solid rgba(255,255,255,.35);
-                    background:#fff;color:#111;padding:.6rem .75rem;outline:none;">
-    </div>
-
-    <div style="margin-bottom:12px">
-      <label style="display:block;font-size:.85rem;margin-bottom:4px">سرویس مورد نظر</label>
-      <select name="service" required
-              style="width:100%;border-radius:10px;border:1px solid rgba(255,255,255,.35);
-                     background:#fff;color:#111;padding:.6rem .75rem;outline:none;">
-        <option value="" selected disabled>انتخاب کنید…</option>
-        <option>پذیرش دانشگاه‌های ترکیه</option>
-        <option>مشاوره انتخاب رشته</option>
-        <option>بورسیه و فاند</option>
-        <option>پیگیری پرونده</option>
-        <option>سایر</option>
-      </select>
-    </div>
-
-    <button type="submit"
-            style="width:100%;border:0;cursor:pointer;background:#FFD166;color:#111;
-                   font-weight:800;padding:.7rem 1rem;border-radius:12px;
-                   box-shadow:0 8px 18px rgba(0,0,0,.15);">
-      ارسال
+  <!-- Floating Request Widget -->
+  <div class="uf-contact collapsed" id="ufWidget" aria-live="polite">
+    <!-- FAB -->
+    <button class="uf-fab" id="ufFab" aria-expanded="false" aria-controls="ufPanel" aria-label="درخواست مشاوره">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M20 2H4a2 2 0 0 0-2 2v14l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM6 9h8v2H6V9zm0-3h12v2H6V6z"/>
+      </svg>
     </button>
-  </form>
-</div>
-<script>
-document.getElementById('uf-form')?.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const form = e.currentTarget;
-  const payload = Object.fromEntries(new FormData(form).entries());
-  const btn = form.querySelector('button[type="submit"]');
-  btn.disabled = true;
 
-  try {
-    const res = await fetch('/api/lead', {
-      method: 'POST',
-      headers: { 'Content-Type':'application/json' },
-      body: JSON.stringify(payload)
-    });
-    const json = await res.json();
-    if (json && json.ok) {
-      alert('✅ ثبت شد! همکاران ما با شما تماس می‌گیرند.');
-      form.reset();
-    } else {
-      alert('⚠️ ارسال ناموفق بود. دوباره تلاش کنید.');
-    }
-  } catch (err){
-    alert('❌ خطا در اتصال به سرور.');
-  } finally {
-    btn.disabled = false;
-  }
-});
-</script>
-<header class="site-header">
-  <div class="container navbar">
-    <a class="logo" href="/">uninfoo</a>
-    <div class="burger" onclick="document.body.classList.toggle('nav-open')">☰</div>
-    <nav class="menu">
-      <a href="/home">خانه</a>
-      <a href="/reshteha">رشته‌ها</a>
-      <a href="/daneshgha">دانشگاه‌ها</a>
-      <a href="/mashavere">مشاوره</a>
-    </nav>
-  </div>
-</header>
-
-<main class="container">
-  <section class="hero">
-    <img src="{{ url_for('static', filename='hero-scholarship.jpg') }}" alt="">
-    <div class="hero-content">
-      <h1 class="title">بهترین دانشگاه‌های ترکیه برای بورس</h1>
-      <p class="subtitle">راهنمای کامل پذیرش، شهریه‌ها و نکات مهم…</p>
-    </div>
-  </section>
-  <section class="layout">
-    <div>
-      <div class="grid">
-        <!-- کارت‌ها/مقالات -->
-        <article class="card">…</article>
-        <article class="card">…</article>
-        <article class="card">…</article>
+    <!-- Panel -->
+    <div class="uf-panel request-box" id="ufPanel" role="dialog" aria-modal="true" aria-labelledby="ufTitle">
+      <div class="uf-head">
+        <strong id="ufTitle" style="font-size:1rem">درخواست مشاوره رایگان</strong>
+        <button class="uf-close" id="ufClose" aria-label="بستن">×</button>
       </div>
-    </div>
 
-    <aside class="uf-panel request-box">
-      <!-- فرم سبز -->
-      <form>
-        <div class="uf-field"><input type="text" placeholder="نام"></div>
-        <div class="uf-field"><input type="text" placeholder="نام خانوادگی"></div>
-        <div class="uf-field"><input type="email" placeholder="ایمیل"></div>
-        <div class="uf-field"><input type="tel" placeholder="شماره همراه"></div>
+      <form id="uf-form" action="#" method="post">
         <div class="uf-field">
-          <select>
-            <option>سرویس مورد نظر</option>
+          <label>نام</label>
+          <input name="first_name" required placeholder="نام">
+        </div>
+        <div class="uf-field">
+          <label>نام خانوادگی</label>
+          <input name="last_name" required placeholder="نام خانوادگی">
+        </div>
+        <div class="uf-field">
+          <label>ایمیل</label>
+          <input name="email" type="email" placeholder="example@mail.com">
+        </div>
+        <div class="uf-field">
+          <label>شماره همراه</label>
+          <input name="phone" inputmode="tel" required placeholder="09xxxxxxxxx">
+        </div>
+        <div class="uf-field">
+          <label>سرویس مورد نظر</label>
+          <select name="service" required>
+            <option value="" selected disabled>انتخاب کنید…</option>
+            <option>پذیرش دانشگاه‌های ترکیه</option>
+            <option>مشاوره انتخاب رشته</option>
+            <option>بورسیه و فاند</option>
+            <option>پیگیری پرونده</option>
+            <option>سایر</option>
           </select>
         </div>
-        <button class="btn" type="submit">ارسال</button>
-      </form>
-    </aside>
-  </section>
 
-  <a class="fab btn" href="https://wa.me/905366005851" aria-label="WhatsApp">WA</a>
-</main>
+        <button type="submit" class="uf-submit">ارسال</button>
+        <div class="uf-status" id="ufStatus"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Inline script (self-contained) -->
+  <script>
+    (function(){
+      const root  = document.getElementById('ufWidget');
+      const fab   = document.getElementById('ufFab');
+      const panel = document.getElementById('ufPanel');
+      const close = document.getElementById('ufClose');
+      const status= document.getElementById('ufStatus');
+      const form  = document.getElementById('uf-form');
+
+      const open = () => {
+        root.classList.remove('collapsed');
+        fab.setAttribute('aria-expanded','true');
+        const first = panel.querySelector('input,select,button');
+        if(first) setTimeout(()=> first.focus(), 40);
+      };
+      const hide = () => {
+        root.classList.add('collapsed');
+        fab.setAttribute('aria-expanded','false');
+        fab.focus();
+      };
+
+      fab.addEventListener('click', open);
+      close.addEventListener('click', hide);
+      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && !root.classList.contains('collapsed')) hide(); });
+
+      form.addEventListener('submit', async (e)=>{
+        e.preventDefault();
+        status.textContent = 'در حال ارسال…';
+        const payload = Object.fromEntries(new FormData(form).entries());
+        try{
+          const res = await fetch('/api/lead', {
+            method: 'POST',
+            headers: { 'Content-Type':'application/json' },
+            body: JSON.stringify(payload)
+          });
+          const json = await res.json().catch(()=> ({}));
+          if (res.ok && json && (json.ok ?? true)) {
+            status.textContent = 'ارسال شد! همکاران ما با شما تماس می‌گیرند.';
+            form.reset();
+            setTimeout(hide, 800);
+          } else {
+            status.textContent = 'ارسال ناموفق بود. دوباره تلاش کنید.';
+          }
+        }catch(err){
+          status.textContent = 'خطا در اتصال به سرور.';
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
